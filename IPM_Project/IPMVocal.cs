@@ -32,7 +32,7 @@ namespace IPM_Project
 
             const int BEAM_WIDTH = 500;
             deepSpeechClient = new DeepSpeechClient.DeepSpeech();
-            deepSpeechClient.CreateModel("C:\\IPM_Project\\output_graph.pbmm", BEAM_WIDTH);
+            deepSpeechClient.CreateModel("..\\..\\output_graph.pbmm", BEAM_WIDTH); 
             SimpleIoc.Default.Register<IDeepSpeech>(() => deepSpeechClient);
             SimpleIoc.Default.Register<VoiceDetector>();
         }

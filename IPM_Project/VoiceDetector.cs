@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.ObjectModel;
+using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
@@ -182,6 +183,7 @@ namespace IPM_Project
                 Task.Run(() => OnNewData());
             }
         }
+        
         
         private void OnNewData()
         {
