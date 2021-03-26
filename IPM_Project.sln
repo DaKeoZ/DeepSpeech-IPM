@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPM_Project", "IPM_Project\IPM_Project.csproj", "{7FFC936B-DB0E-4A60-A22E-12FCAC045A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPM_Tests", "IPM_Tests\IPM_Tests.csproj", "{3C622168-41F1-405B-89D3-581170ACEB5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FFC936B-DB0E-4A60-A22E-12FCAC045A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FFC936B-DB0E-4A60-A22E-12FCAC045A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FFC936B-DB0E-4A60-A22E-12FCAC045A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FFC936B-DB0E-4A60-A22E-12FCAC045A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C622168-41F1-405B-89D3-581170ACEB5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C622168-41F1-405B-89D3-581170ACEB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C622168-41F1-405B-89D3-581170ACEB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C622168-41F1-405B-89D3-581170ACEB5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

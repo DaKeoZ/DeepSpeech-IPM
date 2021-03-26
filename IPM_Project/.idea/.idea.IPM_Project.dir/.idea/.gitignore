@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.IPM_Project.iml
+/contentModel.xml
+# Datasource local storage ignored files
+/../../../../../:\IPM_Project\.idea\.idea.IPM_Project.dir\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
