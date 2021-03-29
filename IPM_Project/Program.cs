@@ -1,10 +1,11 @@
 ﻿namespace IPM_Project
 {
-    internal class Program
+    internal static class Program
     {
         public static void Main(string[] args)
         {
-            IPMVocal ipmVocal = new IPMVocal();
+            // Calls the singleton IPMVocal
+            IPMVocal ipmVocal = IPMVocal.GetInstance();
         }
     }
 }

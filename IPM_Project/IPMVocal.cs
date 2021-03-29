@@ -4,39 +4,64 @@ using GalaSoft.MvvmLight.Ioc;
 
 namespace IPM_Project
 {
-    /**
-     * Singleton running the program
-     */
+    /// <summary>
+    /// Singleton used to run the program.
+    /// </summary>
     public class IPMVocal {
+        /// <summary>
+        /// Singleton's instance. 
+        /// </summary>
+        private static IPMVocal _instance;
+        /// <summary>
+        /// 
+        /// </summary>
+        private VoiceDetector _voiceDetector;
+        private CommandInterpreter _commandInterpreter;
+        private RedisIntermediate _redisIntermediate;
+        private static DeepSpeechClient.DeepSpeech _deepSpeechClient;
 
-        private static IPMVocal Instance;
-        private VoiceDetector VoiceDetector;
-        private CommandInterpreter CommandInterpreter;
-        private RedisIntermediate RedisIntermediate;
-        private static DeepSpeechClient.DeepSpeech deepSpeechClient;
-
-        public IPMVocal() {
-            Instance = this;
+        /// <summary>
+        /// Constructor
+        /// TODO: Doc (what does constructor do?)
+        /// Only called once because class is a singleton.
+        /// </summary>
+        private IPMVocal() {
             Start();
-            VoiceDetector = new VoiceDetector(deepSpeechClient);
-            CommandInterpreter = new CommandInterpreter();
-            RedisIntermediate = new RedisIntermediate();
+            _voiceDetector = new VoiceDetector(_deepSpeechClient);
+            _commandInterpreter = new CommandInterpreter();
+            _redisIntermediate = new RedisIntermediate();
         }
-
+        
+        /// <summary>
+        /// Creates a singleton's instance if it doesn't already exists.
+        /// Used to prevent a Singleton from creating multiple instances of itself. 
+        /// </summary>
+        /// <returns>The Singleton instance</returns>
         public static IPMVocal GetInstance() {
-            return Instance;
+            if (_instance == null)
+            {
+                _instance = new IPMVocal();
+            }
+            return _instance;
         }
 
-        public static void Start() {
+        /// <summary>
+        /// TODO: Doc
+        /// </summary>
+        private static void Start() {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
-            const int BEAM_WIDTH = 500;
-            deepSpeechClient = new DeepSpeechClient.DeepSpeech();
-            deepSpeechClient.CreateModel("..\\..\\output_graph.pbmm", BEAM_WIDTH); 
-            SimpleIoc.Default.Register<IDeepSpeech>(() => deepSpeechClient);
+            const int beamWidth = 500;
+            _deepSpeechClient = new DeepSpeechClient.DeepSpeech();
+            _deepSpeechClient.CreateModel("..\\..\\output_graph.pbmm", beamWidth); 
+            SimpleIoc.Default.Register<IDeepSpeech>(() => _deepSpeechClient);
             SimpleIoc.Default.Register<VoiceDetector>();
         }
-
+        
+        /// <summary>
+        /// TODO: Doc
+        /// UNUSED.
+        /// </summary>
         private void Stop() {
             ServiceLocator.Current.GetInstance<IDeepSpeech>()?.Dispose();
         }

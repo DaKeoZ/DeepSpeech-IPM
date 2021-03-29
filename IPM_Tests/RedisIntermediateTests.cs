@@ -15,7 +15,7 @@ namespace IPM_Project
 
         [Test]
         public void SendTestRequest() {
-            this.RedisIntermediate.SendRequest("Test request", CommandType.COMMENT);
+            this.RedisIntermediate.SendRequest("Test request", CommandType.Comment);
         }
 
     }

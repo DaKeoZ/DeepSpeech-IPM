@@ -18,6 +18,9 @@ using Mvvm;
 
 namespace IPM_Project
 {
+    /// <summary>
+    /// TODO: Doc.
+    /// </summary>
     public class VoiceDetector : BindableBase {
         
         private const int SampleRate = 16000;
