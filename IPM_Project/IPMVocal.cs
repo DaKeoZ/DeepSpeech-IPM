@@ -63,12 +63,12 @@ namespace IPM_Project
 
             const int beamWidth = 500;
             _deepSpeechClient = new DeepSpeechClient.DeepSpeech();
+            
             try {
-                _deepSpeechClient.CreateModel("..\\..\\output_graph.pbmm", beamWidth);
+                _deepSpeechClient.CreateModel("F:\\deepspeech-0.6.1-models\\deepspeech-0.6.1-models\\output_graph.pbmm", beamWidth);
             } catch (FileNotFoundException Ex){
                 Console.Write(Ex.Message);
             }
-            
 
             SimpleIoc.Default.Register<IDeepSpeech>(() => _deepSpeechClient);
             SimpleIoc.Default.Register<VoiceDetector>();

@@ -7,10 +7,11 @@ namespace IPM_Project
     /// Class used to turn a string into a command to send to the REDIS server.
     /// </summary>
     public class CommandInterpreter {
+
         /// String corresponding to a sentence with a potential keyword understood by DeepSpeech.
         /// Used in InterpretCommandKeywords
-        public string VoiceCommandString { get; set; }
-
+        public string VoiceCommandString;
+        
         /// <summary>
         /// Constructor.
         /// Sets the VoiceCommandString to empty if no parameters are passed. 
@@ -39,7 +40,9 @@ namespace IPM_Project
                 if (VoiceCommandString.Contains(command.ToString())) { // First detected keyword
                     return command;
                 }
+                
             }
+            
             // No keyword detected 
             return CommandType.Error;
         }
