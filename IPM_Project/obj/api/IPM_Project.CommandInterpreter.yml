@@ -1,0 +1,514 @@
+### YamlMime:ManagedReference
+items:
+- uid: IPM_Project.CommandInterpreter
+  commentId: T:IPM_Project.CommandInterpreter
+  id: CommandInterpreter
+  parent: IPM_Project
+  children:
+  - IPM_Project.CommandInterpreter.#ctor
+  - IPM_Project.CommandInterpreter.#ctor(System.String)
+  - IPM_Project.CommandInterpreter.InterpretCommandKeywords
+  - IPM_Project.CommandInterpreter.VoiceCommandString
+  langs:
+  - csharp
+  - vb
+  name: CommandInterpreter
+  nameWithType: CommandInterpreter
+  fullName: IPM_Project.CommandInterpreter
+  type: Class
+  source:
+    remote:
+      path: IPM_Project/CommandInterpreter.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: CommandInterpreter
+    path: CommandInterpreter.cs
+    startLine: 8
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  summary: "\nClass used to turn a string into a command to send to the REDIS server.\n"
+  example: []
+  syntax:
+    content: public class CommandInterpreter
+    content.vb: Public Class CommandInterpreter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IPM_Project.CommandInterpreter.VoiceCommandString
+  commentId: P:IPM_Project.CommandInterpreter.VoiceCommandString
+  id: VoiceCommandString
+  parent: IPM_Project.CommandInterpreter
+  langs:
+  - csharp
+  - vb
+  name: VoiceCommandString
+  nameWithType: CommandInterpreter.VoiceCommandString
+  fullName: IPM_Project.CommandInterpreter.VoiceCommandString
+  type: Property
+  source:
+    remote:
+      path: IPM_Project/CommandInterpreter.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: VoiceCommandString
+    path: CommandInterpreter.cs
+    startLine: 11
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  example: []
+  syntax:
+    content: public string VoiceCommandString { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property VoiceCommandString As String
+  overload: IPM_Project.CommandInterpreter.VoiceCommandString*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: IPM_Project.CommandInterpreter.#ctor
+  commentId: M:IPM_Project.CommandInterpreter.#ctor
+  id: '#ctor'
+  parent: IPM_Project.CommandInterpreter
+  langs:
+  - csharp
+  - vb
+  name: CommandInterpreter()
+  nameWithType: CommandInterpreter.CommandInterpreter()
+  fullName: IPM_Project.CommandInterpreter.CommandInterpreter()
+  type: Constructor
+  source:
+    remote:
+      path: IPM_Project/CommandInterpreter.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: .ctor
+    path: CommandInterpreter.cs
+    startLine: 17
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  summary: "\nConstructor.\nSets the VoiceCommandString to empty if no parameters are passed. \n"
+  example: []
+  syntax:
+    content: public CommandInterpreter()
+    content.vb: Public Sub New
+  overload: IPM_Project.CommandInterpreter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IPM_Project.CommandInterpreter.#ctor(System.String)
+  commentId: M:IPM_Project.CommandInterpreter.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: IPM_Project.CommandInterpreter
+  langs:
+  - csharp
+  - vb
+  name: CommandInterpreter(String)
+  nameWithType: CommandInterpreter.CommandInterpreter(String)
+  fullName: IPM_Project.CommandInterpreter.CommandInterpreter(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: IPM_Project/CommandInterpreter.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: .ctor
+    path: CommandInterpreter.cs
+    startLine: 26
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  summary: "\nConstructor.\n<param name=\"theVoiceCommandString\">String stored in VoiceCommandString</param>\n"
+  example: []
+  syntax:
+    content: public CommandInterpreter(string theVoiceCommandString)
+    parameters:
+    - id: theVoiceCommandString
+      type: System.String
+    content.vb: Public Sub New(theVoiceCommandString As String)
+  overload: IPM_Project.CommandInterpreter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IPM_Project.CommandInterpreter.InterpretCommandKeywords
+  commentId: M:IPM_Project.CommandInterpreter.InterpretCommandKeywords
+  id: InterpretCommandKeywords
+  parent: IPM_Project.CommandInterpreter
+  langs:
+  - csharp
+  - vb
+  name: InterpretCommandKeywords()
+  nameWithType: CommandInterpreter.InterpretCommandKeywords()
+  fullName: IPM_Project.CommandInterpreter.InterpretCommandKeywords()
+  type: Method
+  source:
+    remote:
+      path: IPM_Project/CommandInterpreter.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: InterpretCommandKeywords
+    path: CommandInterpreter.cs
+    startLine: 34
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  summary: "\nFor every command in the Enum, check if its VoiceCommandString contains one of its keywords\n"
+  example: []
+  syntax:
+    content: public CommandType InterpretCommandKeywords()
+    return:
+      type: IPM_Project.CommandType
+      description: The recognised command if found, the error command if no keywords were found.
+    content.vb: Public Function InterpretCommandKeywords As CommandType
+  overload: IPM_Project.CommandInterpreter.InterpretCommandKeywords*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: IPM_Project
+  commentId: N:IPM_Project
+  name: IPM_Project
+  nameWithType: IPM_Project
+  fullName: IPM_Project
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IPM_Project.CommandInterpreter.VoiceCommandString*
+  commentId: Overload:IPM_Project.CommandInterpreter.VoiceCommandString
+  name: VoiceCommandString
+  nameWithType: CommandInterpreter.VoiceCommandString
+  fullName: IPM_Project.CommandInterpreter.VoiceCommandString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: IPM_Project.CommandInterpreter.#ctor*
+  commentId: Overload:IPM_Project.CommandInterpreter.#ctor
+  name: CommandInterpreter
+  nameWithType: CommandInterpreter.CommandInterpreter
+  fullName: IPM_Project.CommandInterpreter.CommandInterpreter
+- uid: IPM_Project.CommandInterpreter.InterpretCommandKeywords*
+  commentId: Overload:IPM_Project.CommandInterpreter.InterpretCommandKeywords
+  name: InterpretCommandKeywords
+  nameWithType: CommandInterpreter.InterpretCommandKeywords
+  fullName: IPM_Project.CommandInterpreter.InterpretCommandKeywords
+- uid: IPM_Project.CommandType
+  commentId: T:IPM_Project.CommandType
+  parent: IPM_Project
+  name: CommandType
+  nameWithType: CommandType
+  fullName: IPM_Project.CommandType

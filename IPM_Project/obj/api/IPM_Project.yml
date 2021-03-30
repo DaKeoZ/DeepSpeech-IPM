@@ -1,0 +1,60 @@
+### YamlMime:ManagedReference
+items:
+- uid: IPM_Project
+  commentId: N:IPM_Project
+  id: IPM_Project
+  children:
+  - IPM_Project.BindableBase
+  - IPM_Project.CommandInterpreter
+  - IPM_Project.CommandType
+  - IPM_Project.IPMVocal
+  - IPM_Project.RedisIntermediate
+  - IPM_Project.VoiceDetector
+  langs:
+  - csharp
+  - vb
+  name: IPM_Project
+  nameWithType: IPM_Project
+  fullName: IPM_Project
+  type: Namespace
+  assemblies:
+  - IPM_Project
+references:
+- uid: IPM_Project.BindableBase
+  commentId: T:IPM_Project.BindableBase
+  parent: IPM_Project
+  name: BindableBase
+  nameWithType: BindableBase
+  fullName: IPM_Project.BindableBase
+- uid: IPM_Project.CommandInterpreter
+  commentId: T:IPM_Project.CommandInterpreter
+  name: CommandInterpreter
+  nameWithType: CommandInterpreter
+  fullName: IPM_Project.CommandInterpreter
+- uid: IPM_Project.CommandType
+  commentId: T:IPM_Project.CommandType
+  parent: IPM_Project
+  name: CommandType
+  nameWithType: CommandType
+  fullName: IPM_Project.CommandType
+- uid: IPM_Project.IPMVocal
+  commentId: T:IPM_Project.IPMVocal
+  parent: IPM_Project
+  name: IPMVocal
+  nameWithType: IPMVocal
+  fullName: IPM_Project.IPMVocal
+- uid: IPM_Project.RedisIntermediate
+  commentId: T:IPM_Project.RedisIntermediate
+  name: RedisIntermediate
+  nameWithType: RedisIntermediate
+  fullName: IPM_Project.RedisIntermediate
+- uid: IPM_Project.VoiceDetector
+  commentId: T:IPM_Project.VoiceDetector
+  name: VoiceDetector
+  nameWithType: VoiceDetector
+  fullName: IPM_Project.VoiceDetector
+- uid: IPM_Project
+  commentId: N:IPM_Project
+  name: IPM_Project
+  nameWithType: IPM_Project
+  fullName: IPM_Project

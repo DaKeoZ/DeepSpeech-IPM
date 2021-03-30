@@ -1,0 +1,16 @@
+### YamlMime:TableOfContent
+- uid: IPM_Project
+  name: IPM_Project
+  items:
+  - uid: IPM_Project.BindableBase
+    name: BindableBase
+  - uid: IPM_Project.CommandInterpreter
+    name: CommandInterpreter
+  - uid: IPM_Project.CommandType
+    name: CommandType
+  - uid: IPM_Project.IPMVocal
+    name: IPMVocal
+  - uid: IPM_Project.RedisIntermediate
+    name: RedisIntermediate
+  - uid: IPM_Project.VoiceDetector
+    name: VoiceDetector

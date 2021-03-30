@@ -1,4 +1,6 @@
-﻿using CommonServiceLocator;
+﻿using System;
+using System.IO;
+using CommonServiceLocator;
 using DeepSpeechClient.Interfaces;
 using GalaSoft.MvvmLight.Ioc;
 
@@ -13,12 +15,20 @@ namespace IPM_Project
         /// </summary>
         private static IPMVocal _instance;
         /// <summary>
-        /// 
+        /// TODO.
         /// </summary>
         private VoiceDetector _voiceDetector;
+        
+        /// <summary>
+        /// TODO.
+        /// </summary>
         private CommandInterpreter _commandInterpreter;
+        
+        /// <summary>
+        /// TODO.
+        /// </summary>
         private RedisIntermediate _redisIntermediate;
-        private static DeepSpeechClient.DeepSpeech _deepSpeechClient;
+        private DeepSpeechClient.DeepSpeech _deepSpeechClient;
 
         /// <summary>
         /// Constructor
@@ -26,7 +36,7 @@ namespace IPM_Project
         /// Only called once because class is a singleton.
         /// </summary>
         private IPMVocal() {
-            Start();
+            InitializeDeepSpeech();
             _voiceDetector = new VoiceDetector(_deepSpeechClient);
             _commandInterpreter = new CommandInterpreter();
             _redisIntermediate = new RedisIntermediate();
@@ -48,12 +58,18 @@ namespace IPM_Project
         /// <summary>
         /// TODO: Doc
         /// </summary>
-        private static void Start() {
+        private void InitializeDeepSpeech() {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
             const int beamWidth = 500;
             _deepSpeechClient = new DeepSpeechClient.DeepSpeech();
-            _deepSpeechClient.CreateModel("..\\..\\output_graph.pbmm", beamWidth); 
+            try {
+                _deepSpeechClient.CreateModel("..\\..\\output_graph.pbmm", beamWidth);
+            } catch (FileNotFoundException Ex){
+                Console.Write(Ex.Message);
+            }
+            
+
             SimpleIoc.Default.Register<IDeepSpeech>(() => _deepSpeechClient);
             SimpleIoc.Default.Register<VoiceDetector>();
         }

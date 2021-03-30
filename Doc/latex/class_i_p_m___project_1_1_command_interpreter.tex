@@ -1,0 +1,89 @@
+\hypertarget{class_i_p_m___project_1_1_command_interpreter}{}\doxysection{IPM\+\_\+\+Project.\+Command\+Interpreter Class Reference}
+\label{class_i_p_m___project_1_1_command_interpreter}\index{IPM\_Project.CommandInterpreter@{IPM\_Project.CommandInterpreter}}
+
+
+Class used to turn a string into a command to send to the REDIS server.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_p_m___project_1_1_command_interpreter_a2f49702345cae612a77ac1ae3465aebb}{Command\+Interpreter}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Sets the Voice\+Command\+String to empty if no parameters are passed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_i_p_m___project_1_1_command_interpreter_a2ae52d6677fd04aef42a245193f23112}{Command\+Interpreter}} (string the\+Voice\+Command\+String)
+\begin{DoxyCompactList}\small\item\em Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em the\+Voice\+Command\+String} & String stored in Voice\+Command\+String\\
+\hline
+\end{DoxyParams}
+\end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_i_p_m___project_a0c0900f7bd9d7d2e7280ff1cbe5208c6}{Command\+Type}} \mbox{\hyperlink{class_i_p_m___project_1_1_command_interpreter_a2058acc7cef0f3c6ef969251cf49c63d}{Interpret\+Command\+Keywords}} ()
+\begin{DoxyCompactList}\small\item\em For every command in the Enum, check if its Voice\+Command\+String contains one of its keywords \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_i_p_m___project_1_1_command_interpreter_abe0af2ff0d9198324a4121401b845eea}{Voice\+Command\+String}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class used to turn a string into a command to send to the REDIS server. 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_p_m___project_1_1_command_interpreter_a2f49702345cae612a77ac1ae3465aebb}\label{class_i_p_m___project_1_1_command_interpreter_a2f49702345cae612a77ac1ae3465aebb}} 
+\index{IPM\_Project.CommandInterpreter@{IPM\_Project.CommandInterpreter}!CommandInterpreter@{CommandInterpreter}}
+\index{CommandInterpreter@{CommandInterpreter}!IPM\_Project.CommandInterpreter@{IPM\_Project.CommandInterpreter}}
+\doxysubsubsection{\texorpdfstring{CommandInterpreter()}{CommandInterpreter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily IPM\+\_\+\+Project.\+Command\+Interpreter.\+Command\+Interpreter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. Sets the Voice\+Command\+String to empty if no parameters are passed. 
+
+\mbox{\Hypertarget{class_i_p_m___project_1_1_command_interpreter_a2ae52d6677fd04aef42a245193f23112}\label{class_i_p_m___project_1_1_command_interpreter_a2ae52d6677fd04aef42a245193f23112}} 
+\index{IPM\_Project.CommandInterpreter@{IPM\_Project.CommandInterpreter}!CommandInterpreter@{CommandInterpreter}}
+\index{CommandInterpreter@{CommandInterpreter}!IPM\_Project.CommandInterpreter@{IPM\_Project.CommandInterpreter}}
+\doxysubsubsection{\texorpdfstring{CommandInterpreter()}{CommandInterpreter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily IPM\+\_\+\+Project.\+Command\+Interpreter.\+Command\+Interpreter (\begin{DoxyParamCaption}\item[{string}]{the\+Voice\+Command\+String }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+\begin{DoxyParams}{Parameters}
+{\em the\+Voice\+Command\+String} & String stored in Voice\+Command\+String\\
+\hline
+\end{DoxyParams}
+
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_p_m___project_1_1_command_interpreter_a2058acc7cef0f3c6ef969251cf49c63d}\label{class_i_p_m___project_1_1_command_interpreter_a2058acc7cef0f3c6ef969251cf49c63d}} 
+\index{IPM\_Project.CommandInterpreter@{IPM\_Project.CommandInterpreter}!InterpretCommandKeywords@{InterpretCommandKeywords}}
+\index{InterpretCommandKeywords@{InterpretCommandKeywords}!IPM\_Project.CommandInterpreter@{IPM\_Project.CommandInterpreter}}
+\doxysubsubsection{\texorpdfstring{InterpretCommandKeywords()}{InterpretCommandKeywords()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_i_p_m___project_a0c0900f7bd9d7d2e7280ff1cbe5208c6}{Command\+Type}} IPM\+\_\+\+Project.\+Command\+Interpreter.\+Interpret\+Command\+Keywords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+For every command in the Enum, check if its Voice\+Command\+String contains one of its keywords 
+
+\begin{DoxyReturn}{Returns}
+The recognised command if found, the error command if no keywords were found.
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_i_p_m___project_1_1_command_interpreter_abe0af2ff0d9198324a4121401b845eea}\label{class_i_p_m___project_1_1_command_interpreter_abe0af2ff0d9198324a4121401b845eea}} 
+\index{IPM\_Project.CommandInterpreter@{IPM\_Project.CommandInterpreter}!VoiceCommandString@{VoiceCommandString}}
+\index{VoiceCommandString@{VoiceCommandString}!IPM\_Project.CommandInterpreter@{IPM\_Project.CommandInterpreter}}
+\doxysubsubsection{\texorpdfstring{VoiceCommandString}{VoiceCommandString}}
+{\footnotesize\ttfamily string IPM\+\_\+\+Project.\+Command\+Interpreter.\+Voice\+Command\+String\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+String corresponding to a sentence with a potential keyword understood by Deep\+Speech. Used in Interpret\+Command\+Keywords 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/llaru/\+One\+Drive/\+Bureau/\+IPM/\+IPM\+\_\+\+Project/Command\+Interpreter.\+cs\end{DoxyCompactItemize}

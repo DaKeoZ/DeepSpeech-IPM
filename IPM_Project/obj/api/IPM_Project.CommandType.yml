@@ -1,0 +1,183 @@
+### YamlMime:ManagedReference
+items:
+- uid: IPM_Project.CommandType
+  commentId: T:IPM_Project.CommandType
+  id: CommandType
+  parent: IPM_Project
+  children:
+  - IPM_Project.CommandType.Comment
+  - IPM_Project.CommandType.Error
+  - IPM_Project.CommandType.No
+  - IPM_Project.CommandType.Yes
+  langs:
+  - csharp
+  - vb
+  name: CommandType
+  nameWithType: CommandType
+  fullName: IPM_Project.CommandType
+  type: Enum
+  source:
+    remote:
+      path: IPM_Project/CommandType.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: CommandType
+    path: CommandType.cs
+    startLine: 4
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  syntax:
+    content: public enum CommandType
+    content.vb: Public Enum CommandType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: IPM_Project.CommandType.Error
+  commentId: F:IPM_Project.CommandType.Error
+  id: Error
+  parent: IPM_Project.CommandType
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: CommandType.Error
+  fullName: IPM_Project.CommandType.Error
+  type: Field
+  source:
+    remote:
+      path: IPM_Project/CommandType.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: Error
+    path: CommandType.cs
+    startLine: 9
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: Error = 0
+    return:
+      type: IPM_Project.CommandType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: IPM_Project.CommandType.Yes
+  commentId: F:IPM_Project.CommandType.Yes
+  id: Yes
+  parent: IPM_Project.CommandType
+  langs:
+  - csharp
+  - vb
+  name: Yes
+  nameWithType: CommandType.Yes
+  fullName: IPM_Project.CommandType.Yes
+  type: Field
+  source:
+    remote:
+      path: IPM_Project/CommandType.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: Yes
+    path: CommandType.cs
+    startLine: 15
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  example: []
+  syntax:
+    content: Yes = 1
+    return:
+      type: IPM_Project.CommandType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: IPM_Project.CommandType.No
+  commentId: F:IPM_Project.CommandType.No
+  id: No
+  parent: IPM_Project.CommandType
+  langs:
+  - csharp
+  - vb
+  name: No
+  nameWithType: CommandType.No
+  fullName: IPM_Project.CommandType.No
+  type: Field
+  source:
+    remote:
+      path: IPM_Project/CommandType.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: No
+    path: CommandType.cs
+    startLine: 21
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  example: []
+  syntax:
+    content: No = 2
+    return:
+      type: IPM_Project.CommandType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: IPM_Project.CommandType.Comment
+  commentId: F:IPM_Project.CommandType.Comment
+  id: Comment
+  parent: IPM_Project.CommandType
+  langs:
+  - csharp
+  - vb
+  name: Comment
+  nameWithType: CommandType.Comment
+  fullName: IPM_Project.CommandType.Comment
+  type: Field
+  source:
+    remote:
+      path: IPM_Project/CommandType.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: Comment
+    path: CommandType.cs
+    startLine: 27
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  example: []
+  syntax:
+    content: Comment = 3
+    return:
+      type: IPM_Project.CommandType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: IPM_Project
+  commentId: N:IPM_Project
+  name: IPM_Project
+  nameWithType: IPM_Project
+  fullName: IPM_Project
+- uid: IPM_Project.CommandType
+  commentId: T:IPM_Project.CommandType
+  parent: IPM_Project
+  name: CommandType
+  nameWithType: CommandType
+  fullName: IPM_Project.CommandType

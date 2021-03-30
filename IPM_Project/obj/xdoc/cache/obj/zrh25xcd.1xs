@@ -1,0 +1,2696 @@
+id: IPM_Project
+language: CSharp
+name:
+  Default: IPM_Project
+qualifiedName:
+  Default: IPM_Project
+type: Assembly
+modifiers: {}
+items:
+- id: IPM_Project
+  commentId: N:IPM_Project
+  language: CSharp
+  name:
+    CSharp: IPM_Project
+    VB: IPM_Project
+  nameWithType:
+    CSharp: IPM_Project
+    VB: IPM_Project
+  qualifiedName:
+    CSharp: IPM_Project
+    VB: IPM_Project
+  type: Namespace
+  assemblies:
+  - IPM_Project
+  modifiers: {}
+  items:
+  - id: IPM_Project.BindableBase
+    commentId: T:IPM_Project.BindableBase
+    language: CSharp
+    name:
+      CSharp: BindableBase
+      VB: BindableBase
+    nameWithType:
+      CSharp: BindableBase
+      VB: BindableBase
+    qualifiedName:
+      CSharp: IPM_Project.BindableBase
+      VB: IPM_Project.BindableBase
+    type: Class
+    assemblies:
+    - IPM_Project
+    namespace: IPM_Project
+    source:
+      remote:
+        path: IPM_Project/BindableBase.cs
+        branch: master
+        repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+      id: BindableBase
+      path: BindableBase.cs
+      startLine: 9
+    summary: "\nTODO: Doc.\n"
+    example: []
+    syntax:
+      content:
+        CSharp: 'public class BindableBase : INotifyPropertyChanged'
+        VB: >-
+          Public Class BindableBase
+
+              Implements INotifyPropertyChanged
+    inheritance:
+    - System.Object
+    implements:
+    - System.ComponentModel.INotifyPropertyChanged
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action)
+      commentId: M:IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action)
+      language: CSharp
+      name:
+        CSharp: SetProperty<T>(ref T, T, String, Action)
+        VB: SetProperty(Of T)(ByRef T, T, String, Action)
+      nameWithType:
+        CSharp: BindableBase.SetProperty<T>(ref T, T, String, Action)
+        VB: BindableBase.SetProperty(Of T)(ByRef T, T, String, Action)
+      qualifiedName:
+        CSharp: IPM_Project.BindableBase.SetProperty<T>(ref T, T, System.String, System.Action)
+        VB: IPM_Project.BindableBase.SetProperty(Of T)(ByRef T, T, System.String, System.Action)
+      type: Method
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/BindableBase.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: SetProperty
+        path: BindableBase.cs
+        startLine: 19
+      summary: "\nTODO: Doc.\n"
+      example: []
+      syntax:
+        content:
+          CSharp: protected bool SetProperty<T>(ref T backingStore, T value, string propertyName = "", Action onChanged = null)
+          VB: Protected Function SetProperty(Of T)(ByRef backingStore As T, value As T, propertyName As String = "", onChanged As Action = Nothing) As Boolean
+        parameters:
+        - id: backingStore
+          type: '{T}'
+          description: ''
+        - id: value
+          type: '{T}'
+          description: ''
+        - id: propertyName
+          type: System.String
+          description: ''
+        - id: onChanged
+          type: System.Action
+          description: ''
+        typeParameters:
+        - id: T
+          description: ''
+        return:
+          type: System.Boolean
+          description: ''
+      overload: IPM_Project.BindableBase.SetProperty*
+      modifiers:
+        CSharp:
+        - protected
+        VB:
+        - Protected
+    - id: IPM_Project.BindableBase.PropertyChanged
+      commentId: E:IPM_Project.BindableBase.PropertyChanged
+      language: CSharp
+      name:
+        CSharp: PropertyChanged
+        VB: PropertyChanged
+      nameWithType:
+        CSharp: BindableBase.PropertyChanged
+        VB: BindableBase.PropertyChanged
+      qualifiedName:
+        CSharp: IPM_Project.BindableBase.PropertyChanged
+        VB: IPM_Project.BindableBase.PropertyChanged
+      type: Event
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/BindableBase.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: PropertyChanged
+        path: BindableBase.cs
+        startLine: 31
+      syntax:
+        content:
+          CSharp: public event PropertyChangedEventHandler PropertyChanged
+          VB: Public Event PropertyChanged As PropertyChangedEventHandler
+        return:
+          type: System.ComponentModel.PropertyChangedEventHandler
+      implements:
+      - System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: IPM_Project.BindableBase.OnPropertyChanged(System.String)
+      commentId: M:IPM_Project.BindableBase.OnPropertyChanged(System.String)
+      language: CSharp
+      name:
+        CSharp: OnPropertyChanged(String)
+        VB: OnPropertyChanged(String)
+      nameWithType:
+        CSharp: BindableBase.OnPropertyChanged(String)
+        VB: BindableBase.OnPropertyChanged(String)
+      qualifiedName:
+        CSharp: IPM_Project.BindableBase.OnPropertyChanged(System.String)
+        VB: IPM_Project.BindableBase.OnPropertyChanged(System.String)
+      type: Method
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/BindableBase.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: OnPropertyChanged
+        path: BindableBase.cs
+        startLine: 32
+      syntax:
+        content:
+          CSharp: protected void OnPropertyChanged(string propertyName = "")
+          VB: Protected Sub OnPropertyChanged(propertyName As String = "")
+        parameters:
+        - id: propertyName
+          type: System.String
+      overload: IPM_Project.BindableBase.OnPropertyChanged*
+      modifiers:
+        CSharp:
+        - protected
+        VB:
+        - Protected
+  - id: IPM_Project.CommandInterpreter
+    commentId: T:IPM_Project.CommandInterpreter
+    language: CSharp
+    name:
+      CSharp: CommandInterpreter
+      VB: CommandInterpreter
+    nameWithType:
+      CSharp: CommandInterpreter
+      VB: CommandInterpreter
+    qualifiedName:
+      CSharp: IPM_Project.CommandInterpreter
+      VB: IPM_Project.CommandInterpreter
+    type: Class
+    assemblies:
+    - IPM_Project
+    namespace: IPM_Project
+    source:
+      remote:
+        path: IPM_Project/CommandInterpreter.cs
+        branch: master
+        repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+      id: CommandInterpreter
+      path: CommandInterpreter.cs
+      startLine: 8
+    summary: "\nClass used to turn a string into a command to send to the REDIS server.\n"
+    example: []
+    syntax:
+      content:
+        CSharp: public class CommandInterpreter
+        VB: Public Class CommandInterpreter
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: IPM_Project.CommandInterpreter.VoiceCommandString
+      commentId: P:IPM_Project.CommandInterpreter.VoiceCommandString
+      language: CSharp
+      name:
+        CSharp: VoiceCommandString
+        VB: VoiceCommandString
+      nameWithType:
+        CSharp: CommandInterpreter.VoiceCommandString
+        VB: CommandInterpreter.VoiceCommandString
+      qualifiedName:
+        CSharp: IPM_Project.CommandInterpreter.VoiceCommandString
+        VB: IPM_Project.CommandInterpreter.VoiceCommandString
+      type: Property
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/CommandInterpreter.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: VoiceCommandString
+        path: CommandInterpreter.cs
+        startLine: 11
+      example: []
+      syntax:
+        content:
+          CSharp: public string VoiceCommandString { get; set; }
+          VB: Public Property VoiceCommandString As String
+        parameters: []
+        return:
+          type: System.String
+      overload: IPM_Project.CommandInterpreter.VoiceCommandString*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+    - id: IPM_Project.CommandInterpreter.#ctor
+      commentId: M:IPM_Project.CommandInterpreter.#ctor
+      language: CSharp
+      name:
+        CSharp: CommandInterpreter()
+        VB: CommandInterpreter()
+      nameWithType:
+        CSharp: CommandInterpreter.CommandInterpreter()
+        VB: CommandInterpreter.CommandInterpreter()
+      qualifiedName:
+        CSharp: IPM_Project.CommandInterpreter.CommandInterpreter()
+        VB: IPM_Project.CommandInterpreter.CommandInterpreter()
+      type: Constructor
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/CommandInterpreter.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: .ctor
+        path: CommandInterpreter.cs
+        startLine: 17
+      summary: "\nConstructor.\nSets the VoiceCommandString to empty if no parameters are passed. \n"
+      example: []
+      syntax:
+        content:
+          CSharp: public CommandInterpreter()
+          VB: Public Sub New
+      overload: IPM_Project.CommandInterpreter.#ctor*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: IPM_Project.CommandInterpreter.#ctor(System.String)
+      commentId: M:IPM_Project.CommandInterpreter.#ctor(System.String)
+      language: CSharp
+      name:
+        CSharp: CommandInterpreter(String)
+        VB: CommandInterpreter(String)
+      nameWithType:
+        CSharp: CommandInterpreter.CommandInterpreter(String)
+        VB: CommandInterpreter.CommandInterpreter(String)
+      qualifiedName:
+        CSharp: IPM_Project.CommandInterpreter.CommandInterpreter(System.String)
+        VB: IPM_Project.CommandInterpreter.CommandInterpreter(System.String)
+      type: Constructor
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/CommandInterpreter.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: .ctor
+        path: CommandInterpreter.cs
+        startLine: 26
+      summary: "\nConstructor.\n<param name=\"theVoiceCommandString\">String stored in VoiceCommandString</param>\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public CommandInterpreter(string theVoiceCommandString)
+          VB: Public Sub New(theVoiceCommandString As String)
+        parameters:
+        - id: theVoiceCommandString
+          type: System.String
+      overload: IPM_Project.CommandInterpreter.#ctor*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: IPM_Project.CommandInterpreter.InterpretCommandKeywords
+      commentId: M:IPM_Project.CommandInterpreter.InterpretCommandKeywords
+      language: CSharp
+      name:
+        CSharp: InterpretCommandKeywords()
+        VB: InterpretCommandKeywords()
+      nameWithType:
+        CSharp: CommandInterpreter.InterpretCommandKeywords()
+        VB: CommandInterpreter.InterpretCommandKeywords()
+      qualifiedName:
+        CSharp: IPM_Project.CommandInterpreter.InterpretCommandKeywords()
+        VB: IPM_Project.CommandInterpreter.InterpretCommandKeywords()
+      type: Method
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/CommandInterpreter.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: InterpretCommandKeywords
+        path: CommandInterpreter.cs
+        startLine: 34
+      summary: "\nFor every command in the Enum, check if its VoiceCommandString contains one of its keywords\n"
+      example: []
+      syntax:
+        content:
+          CSharp: public CommandType InterpretCommandKeywords()
+          VB: Public Function InterpretCommandKeywords As CommandType
+        return:
+          type: IPM_Project.CommandType
+          description: The recognised command if found, the error command if no keywords were found.
+      overload: IPM_Project.CommandInterpreter.InterpretCommandKeywords*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: IPM_Project.CommandType
+    commentId: T:IPM_Project.CommandType
+    language: CSharp
+    name:
+      CSharp: CommandType
+      VB: CommandType
+    nameWithType:
+      CSharp: CommandType
+      VB: CommandType
+    qualifiedName:
+      CSharp: IPM_Project.CommandType
+      VB: IPM_Project.CommandType
+    type: Enum
+    assemblies:
+    - IPM_Project
+    namespace: IPM_Project
+    source:
+      remote:
+        path: IPM_Project/CommandType.cs
+        branch: master
+        repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+      id: CommandType
+      path: CommandType.cs
+      startLine: 4
+    syntax:
+      content:
+        CSharp: public enum CommandType
+        VB: Public Enum CommandType
+    modifiers:
+      CSharp:
+      - public
+      - enum
+      VB:
+      - Public
+      - Enum
+    items:
+    - id: IPM_Project.CommandType.Error
+      commentId: F:IPM_Project.CommandType.Error
+      language: CSharp
+      name:
+        CSharp: Error
+        VB: Error
+      nameWithType:
+        CSharp: CommandType.Error
+        VB: CommandType.Error
+      qualifiedName:
+        CSharp: IPM_Project.CommandType.Error
+        VB: IPM_Project.CommandType.Error
+      type: Field
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/CommandType.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: Error
+        path: CommandType.cs
+        startLine: 8
+      example: []
+      syntax:
+        content:
+          CSharp: Error = 0
+          VB: Error = 0
+        return:
+          type: IPM_Project.CommandType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: IPM_Project.CommandType.Yes
+      commentId: F:IPM_Project.CommandType.Yes
+      language: CSharp
+      name:
+        CSharp: Yes
+        VB: Yes
+      nameWithType:
+        CSharp: CommandType.Yes
+        VB: CommandType.Yes
+      qualifiedName:
+        CSharp: IPM_Project.CommandType.Yes
+        VB: IPM_Project.CommandType.Yes
+      type: Field
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/CommandType.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: Yes
+        path: CommandType.cs
+        startLine: 14
+      example: []
+      syntax:
+        content:
+          CSharp: Yes = 1
+          VB: Yes = 1
+        return:
+          type: IPM_Project.CommandType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: IPM_Project.CommandType.No
+      commentId: F:IPM_Project.CommandType.No
+      language: CSharp
+      name:
+        CSharp: No
+        VB: No
+      nameWithType:
+        CSharp: CommandType.No
+        VB: CommandType.No
+      qualifiedName:
+        CSharp: IPM_Project.CommandType.No
+        VB: IPM_Project.CommandType.No
+      type: Field
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/CommandType.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: No
+        path: CommandType.cs
+        startLine: 20
+      example: []
+      syntax:
+        content:
+          CSharp: No = 2
+          VB: No = 2
+        return:
+          type: IPM_Project.CommandType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+    - id: IPM_Project.CommandType.Comment
+      commentId: F:IPM_Project.CommandType.Comment
+      language: CSharp
+      name:
+        CSharp: Comment
+        VB: Comment
+      nameWithType:
+        CSharp: CommandType.Comment
+        VB: CommandType.Comment
+      qualifiedName:
+        CSharp: IPM_Project.CommandType.Comment
+        VB: IPM_Project.CommandType.Comment
+      type: Field
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/CommandType.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: Comment
+        path: CommandType.cs
+        startLine: 26
+      example: []
+      syntax:
+        content:
+          CSharp: Comment = 3
+          VB: Comment = 3
+        return:
+          type: IPM_Project.CommandType
+      modifiers:
+        CSharp:
+        - public
+        - const
+        VB:
+        - Public
+        - Const
+  - id: IPM_Project.IPMVocal
+    commentId: T:IPM_Project.IPMVocal
+    language: CSharp
+    name:
+      CSharp: IPMVocal
+      VB: IPMVocal
+    nameWithType:
+      CSharp: IPMVocal
+      VB: IPMVocal
+    qualifiedName:
+      CSharp: IPM_Project.IPMVocal
+      VB: IPM_Project.IPMVocal
+    type: Class
+    assemblies:
+    - IPM_Project
+    namespace: IPM_Project
+    source:
+      remote:
+        path: IPM_Project/IPMVocal.cs
+        branch: master
+        repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+      id: IPMVocal
+      path: IPMVocal.cs
+      startLine: 9
+    summary: "\nSingleton used to run the program.\n"
+    example: []
+    syntax:
+      content:
+        CSharp: public class IPMVocal
+        VB: Public Class IPMVocal
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: IPM_Project.IPMVocal.GetInstance
+      commentId: M:IPM_Project.IPMVocal.GetInstance
+      language: CSharp
+      name:
+        CSharp: GetInstance()
+        VB: GetInstance()
+      nameWithType:
+        CSharp: IPMVocal.GetInstance()
+        VB: IPMVocal.GetInstance()
+      qualifiedName:
+        CSharp: IPM_Project.IPMVocal.GetInstance()
+        VB: IPM_Project.IPMVocal.GetInstance()
+      type: Method
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/IPMVocal.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: GetInstance
+        path: IPMVocal.cs
+        startLine: 39
+      summary: "\nCreates a singleton&apos;s instance if it doesn&apos;t already exists.\nUsed to prevent a Singleton from creating multiple instances of itself. \n"
+      example: []
+      syntax:
+        content:
+          CSharp: public static IPMVocal GetInstance()
+          VB: Public Shared Function GetInstance As IPMVocal
+        return:
+          type: IPM_Project.IPMVocal
+          description: The Singleton instance
+      overload: IPM_Project.IPMVocal.GetInstance*
+      modifiers:
+        CSharp:
+        - public
+        - static
+        VB:
+        - Public
+        - Shared
+  - id: IPM_Project.RedisIntermediate
+    commentId: T:IPM_Project.RedisIntermediate
+    language: CSharp
+    name:
+      CSharp: RedisIntermediate
+      VB: RedisIntermediate
+    nameWithType:
+      CSharp: RedisIntermediate
+      VB: RedisIntermediate
+    qualifiedName:
+      CSharp: IPM_Project.RedisIntermediate
+      VB: IPM_Project.RedisIntermediate
+    type: Class
+    assemblies:
+    - IPM_Project
+    namespace: IPM_Project
+    source:
+      remote:
+        path: IPM_Project/RedisIntermediate.cs
+        branch: master
+        repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+      id: RedisIntermediate
+      path: RedisIntermediate.cs
+      startLine: 8
+    example: []
+    syntax:
+      content:
+        CSharp: public class RedisIntermediate
+        VB: Public Class RedisIntermediate
+    inheritance:
+    - System.Object
+    inheritedMembers:
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: IPM_Project.RedisIntermediate.#ctor
+      commentId: M:IPM_Project.RedisIntermediate.#ctor
+      language: CSharp
+      name:
+        CSharp: RedisIntermediate()
+        VB: RedisIntermediate()
+      nameWithType:
+        CSharp: RedisIntermediate.RedisIntermediate()
+        VB: RedisIntermediate.RedisIntermediate()
+      qualifiedName:
+        CSharp: IPM_Project.RedisIntermediate.RedisIntermediate()
+        VB: IPM_Project.RedisIntermediate.RedisIntermediate()
+      type: Constructor
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/RedisIntermediate.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: .ctor
+        path: RedisIntermediate.cs
+        startLine: 17
+      example: []
+      syntax:
+        content:
+          CSharp: public RedisIntermediate()
+          VB: Public Sub New
+      overload: IPM_Project.RedisIntermediate.#ctor*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: IPM_Project.RedisIntermediate.SendRequest(System.String,IPM_Project.CommandType)
+      commentId: M:IPM_Project.RedisIntermediate.SendRequest(System.String,IPM_Project.CommandType)
+      language: CSharp
+      name:
+        CSharp: SendRequest(String, CommandType)
+        VB: SendRequest(String, CommandType)
+      nameWithType:
+        CSharp: RedisIntermediate.SendRequest(String, CommandType)
+        VB: RedisIntermediate.SendRequest(String, CommandType)
+      qualifiedName:
+        CSharp: IPM_Project.RedisIntermediate.SendRequest(System.String, IPM_Project.CommandType)
+        VB: IPM_Project.RedisIntermediate.SendRequest(System.String, IPM_Project.CommandType)
+      type: Method
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/RedisIntermediate.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: SendRequest
+        path: RedisIntermediate.cs
+        startLine: 27
+      example: []
+      syntax:
+        content:
+          CSharp: public void SendRequest(string request, CommandType commandType)
+          VB: Public Sub SendRequest(request As String, commandType As CommandType)
+        parameters:
+        - id: request
+          type: System.String
+        - id: commandType
+          type: IPM_Project.CommandType
+      overload: IPM_Project.RedisIntermediate.SendRequest*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+  - id: IPM_Project.VoiceDetector
+    commentId: T:IPM_Project.VoiceDetector
+    language: CSharp
+    name:
+      CSharp: VoiceDetector
+      VB: VoiceDetector
+    nameWithType:
+      CSharp: VoiceDetector
+      VB: VoiceDetector
+    qualifiedName:
+      CSharp: IPM_Project.VoiceDetector
+      VB: IPM_Project.VoiceDetector
+    type: Class
+    assemblies:
+    - IPM_Project
+    namespace: IPM_Project
+    source:
+      remote:
+        path: IPM_Project/VoiceDetector.cs
+        branch: master
+        repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+      id: VoiceDetector
+      path: VoiceDetector.cs
+      startLine: 23
+    summary: "\nTODO: Doc.\n"
+    example: []
+    syntax:
+      content:
+        CSharp: 'public class VoiceDetector : BindableBase, INotifyPropertyChanged'
+        VB: >-
+          Public Class VoiceDetector
+
+              Inherits BindableBase
+
+              Implements INotifyPropertyChanged
+    inheritance:
+    - System.Object
+    - IPM_Project.BindableBase
+    implements:
+    - System.ComponentModel.INotifyPropertyChanged
+    inheritedMembers:
+    - IPM_Project.BindableBase.SetProperty``1({T}@,{T},System.String,System.Action)
+    - IPM_Project.BindableBase.PropertyChanged
+    - IPM_Project.BindableBase.OnPropertyChanged(System.String)
+    - System.Object.ToString
+    - System.Object.Equals(System.Object)
+    - System.Object.Equals(System.Object,System.Object)
+    - System.Object.ReferenceEquals(System.Object,System.Object)
+    - System.Object.GetHashCode
+    - System.Object.GetType
+    - System.Object.MemberwiseClone
+    modifiers:
+      CSharp:
+      - public
+      - class
+      VB:
+      - Public
+      - Class
+    items:
+    - id: IPM_Project.VoiceDetector.InferenceFromFileCommand
+      commentId: P:IPM_Project.VoiceDetector.InferenceFromFileCommand
+      language: CSharp
+      name:
+        CSharp: InferenceFromFileCommand
+        VB: InferenceFromFileCommand
+      nameWithType:
+        CSharp: VoiceDetector.InferenceFromFileCommand
+        VB: VoiceDetector.InferenceFromFileCommand
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.InferenceFromFileCommand
+        VB: IPM_Project.VoiceDetector.InferenceFromFileCommand
+      type: Property
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: InferenceFromFileCommand
+        path: VoiceDetector.cs
+        startLine: 33
+      syntax:
+        content:
+          CSharp: public IAsyncCommand InferenceFromFileCommand { get; }
+          VB: Public ReadOnly Property InferenceFromFileCommand As IAsyncCommand
+        parameters: []
+        return:
+          type: AsyncAwaitBestPractices.MVVM.IAsyncCommand
+      overload: IPM_Project.VoiceDetector.InferenceFromFileCommand*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        VB:
+        - Public
+        - ReadOnly
+    - id: IPM_Project.VoiceDetector.StartRecordingCommand
+      commentId: P:IPM_Project.VoiceDetector.StartRecordingCommand
+      language: CSharp
+      name:
+        CSharp: StartRecordingCommand
+        VB: StartRecordingCommand
+      nameWithType:
+        CSharp: VoiceDetector.StartRecordingCommand
+        VB: VoiceDetector.StartRecordingCommand
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.StartRecordingCommand
+        VB: IPM_Project.VoiceDetector.StartRecordingCommand
+      type: Property
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: StartRecordingCommand
+        path: VoiceDetector.cs
+        startLine: 34
+      syntax:
+        content:
+          CSharp: public RelayCommand StartRecordingCommand { get; }
+          VB: Public ReadOnly Property StartRecordingCommand As RelayCommand
+        parameters: []
+        return:
+          type: GalaSoft.MvvmLight.Command.RelayCommand
+      overload: IPM_Project.VoiceDetector.StartRecordingCommand*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        VB:
+        - Public
+        - ReadOnly
+    - id: IPM_Project.VoiceDetector.StopRecordingCommand
+      commentId: P:IPM_Project.VoiceDetector.StopRecordingCommand
+      language: CSharp
+      name:
+        CSharp: StopRecordingCommand
+        VB: StopRecordingCommand
+      nameWithType:
+        CSharp: VoiceDetector.StopRecordingCommand
+        VB: VoiceDetector.StopRecordingCommand
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.StopRecordingCommand
+        VB: IPM_Project.VoiceDetector.StopRecordingCommand
+      type: Property
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: StopRecordingCommand
+        path: VoiceDetector.cs
+        startLine: 35
+      syntax:
+        content:
+          CSharp: public IAsyncCommand StopRecordingCommand { get; }
+          VB: Public ReadOnly Property StopRecordingCommand As IAsyncCommand
+        parameters: []
+        return:
+          type: AsyncAwaitBestPractices.MVVM.IAsyncCommand
+      overload: IPM_Project.VoiceDetector.StopRecordingCommand*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        VB:
+        - Public
+        - ReadOnly
+    - id: IPM_Project.VoiceDetector.StreamingIsBusy
+      commentId: P:IPM_Project.VoiceDetector.StreamingIsBusy
+      language: CSharp
+      name:
+        CSharp: StreamingIsBusy
+        VB: StreamingIsBusy
+      nameWithType:
+        CSharp: VoiceDetector.StreamingIsBusy
+        VB: VoiceDetector.StreamingIsBusy
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.StreamingIsBusy
+        VB: IPM_Project.VoiceDetector.StreamingIsBusy
+      type: Property
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: StreamingIsBusy
+        path: VoiceDetector.cs
+        startLine: 42
+      syntax:
+        content:
+          CSharp: public bool StreamingIsBusy { get; set; }
+          VB: Public Property StreamingIsBusy As Boolean
+        parameters: []
+        return:
+          type: System.Boolean
+      overload: IPM_Project.VoiceDetector.StreamingIsBusy*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+    - id: IPM_Project.VoiceDetector.EnableStartRecord
+      commentId: P:IPM_Project.VoiceDetector.EnableStartRecord
+      language: CSharp
+      name:
+        CSharp: EnableStartRecord
+        VB: EnableStartRecord
+      nameWithType:
+        CSharp: VoiceDetector.EnableStartRecord
+        VB: VoiceDetector.EnableStartRecord
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.EnableStartRecord
+        VB: IPM_Project.VoiceDetector.EnableStartRecord
+      type: Property
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: EnableStartRecord
+        path: VoiceDetector.cs
+        startLine: 54
+      syntax:
+        content:
+          CSharp: public bool EnableStartRecord { get; set; }
+          VB: Public Property EnableStartRecord As Boolean
+        parameters: []
+        return:
+          type: System.Boolean
+      overload: IPM_Project.VoiceDetector.EnableStartRecord*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+    - id: IPM_Project.VoiceDetector.EnableStopRecord
+      commentId: P:IPM_Project.VoiceDetector.EnableStopRecord
+      language: CSharp
+      name:
+        CSharp: EnableStopRecord
+        VB: EnableStopRecord
+      nameWithType:
+        CSharp: VoiceDetector.EnableStopRecord
+        VB: VoiceDetector.EnableStopRecord
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.EnableStopRecord
+        VB: IPM_Project.VoiceDetector.EnableStopRecord
+      type: Property
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: EnableStopRecord
+        path: VoiceDetector.cs
+        startLine: 62
+      syntax:
+        content:
+          CSharp: public bool EnableStopRecord { get; set; }
+          VB: Public Property EnableStopRecord As Boolean
+        parameters: []
+        return:
+          type: System.Boolean
+      overload: IPM_Project.VoiceDetector.EnableStopRecord*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+    - id: IPM_Project.VoiceDetector.SelectedDevice
+      commentId: P:IPM_Project.VoiceDetector.SelectedDevice
+      language: CSharp
+      name:
+        CSharp: SelectedDevice
+        VB: SelectedDevice
+      nameWithType:
+        CSharp: VoiceDetector.SelectedDevice
+        VB: VoiceDetector.SelectedDevice
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.SelectedDevice
+        VB: IPM_Project.VoiceDetector.SelectedDevice
+      type: Property
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: SelectedDevice
+        path: VoiceDetector.cs
+        startLine: 70
+      syntax:
+        content:
+          CSharp: public MMDevice SelectedDevice { get; set; }
+          VB: Public Property SelectedDevice As MMDevice
+        parameters: []
+        return:
+          type: CSCore.CoreAudioAPI.MMDevice
+      overload: IPM_Project.VoiceDetector.SelectedDevice*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+    - id: IPM_Project.VoiceDetector.StatusMessage
+      commentId: P:IPM_Project.VoiceDetector.StatusMessage
+      language: CSharp
+      name:
+        CSharp: StatusMessage
+        VB: StatusMessage
+      nameWithType:
+        CSharp: VoiceDetector.StatusMessage
+        VB: VoiceDetector.StatusMessage
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.StatusMessage
+        VB: IPM_Project.VoiceDetector.StatusMessage
+      type: Property
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: StatusMessage
+        path: VoiceDetector.cs
+        startLine: 78
+      syntax:
+        content:
+          CSharp: public string StatusMessage { get; set; }
+          VB: Public Property StatusMessage As String
+        parameters: []
+        return:
+          type: System.String
+      overload: IPM_Project.VoiceDetector.StatusMessage*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+    - id: IPM_Project.VoiceDetector.Transcription
+      commentId: P:IPM_Project.VoiceDetector.Transcription
+      language: CSharp
+      name:
+        CSharp: Transcription
+        VB: Transcription
+      nameWithType:
+        CSharp: VoiceDetector.Transcription
+        VB: VoiceDetector.Transcription
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.Transcription
+        VB: IPM_Project.VoiceDetector.Transcription
+      type: Property
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: Transcription
+        path: VoiceDetector.cs
+        startLine: 93
+      syntax:
+        content:
+          CSharp: public string Transcription { get; set; }
+          VB: Public Property Transcription As String
+        parameters: []
+        return:
+          type: System.String
+      overload: IPM_Project.VoiceDetector.Transcription*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+    - id: IPM_Project.VoiceDetector.AudioFilePath
+      commentId: P:IPM_Project.VoiceDetector.AudioFilePath
+      language: CSharp
+      name:
+        CSharp: AudioFilePath
+        VB: AudioFilePath
+      nameWithType:
+        CSharp: VoiceDetector.AudioFilePath
+        VB: VoiceDetector.AudioFilePath
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.AudioFilePath
+        VB: IPM_Project.VoiceDetector.AudioFilePath
+      type: Property
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: AudioFilePath
+        path: VoiceDetector.cs
+        startLine: 100
+      syntax:
+        content:
+          CSharp: public string AudioFilePath { get; set; }
+          VB: Public Property AudioFilePath As String
+        parameters: []
+        return:
+          type: System.String
+      overload: IPM_Project.VoiceDetector.AudioFilePath*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+    - id: IPM_Project.VoiceDetector.AvailableRecordDevices
+      commentId: P:IPM_Project.VoiceDetector.AvailableRecordDevices
+      language: CSharp
+      name:
+        CSharp: AvailableRecordDevices
+        VB: AvailableRecordDevices
+      nameWithType:
+        CSharp: VoiceDetector.AvailableRecordDevices
+        VB: VoiceDetector.AvailableRecordDevices
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.AvailableRecordDevices
+        VB: IPM_Project.VoiceDetector.AvailableRecordDevices
+      type: Property
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: AvailableRecordDevices
+        path: VoiceDetector.cs
+        startLine: 107
+      syntax:
+        content:
+          CSharp: public ObservableCollection<MMDevice> AvailableRecordDevices { get; set; }
+          VB: Public Property AvailableRecordDevices As ObservableCollection(Of MMDevice)
+        parameters: []
+        return:
+          type: System.Collections.ObjectModel.ObservableCollection{CSCore.CoreAudioAPI.MMDevice}
+      overload: IPM_Project.VoiceDetector.AvailableRecordDevices*
+      modifiers:
+        CSharp:
+        - public
+        - get
+        - set
+        VB:
+        - Public
+    - id: IPM_Project.VoiceDetector.#ctor(DeepSpeechClient.Interfaces.IDeepSpeech)
+      commentId: M:IPM_Project.VoiceDetector.#ctor(DeepSpeechClient.Interfaces.IDeepSpeech)
+      language: CSharp
+      name:
+        CSharp: VoiceDetector(IDeepSpeech)
+        VB: VoiceDetector(IDeepSpeech)
+      nameWithType:
+        CSharp: VoiceDetector.VoiceDetector(IDeepSpeech)
+        VB: VoiceDetector.VoiceDetector(IDeepSpeech)
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.VoiceDetector(DeepSpeechClient.Interfaces.IDeepSpeech)
+        VB: IPM_Project.VoiceDetector.VoiceDetector(DeepSpeechClient.Interfaces.IDeepSpeech)
+      type: Constructor
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: .ctor
+        path: VoiceDetector.cs
+        startLine: 114
+      syntax:
+        content:
+          CSharp: public VoiceDetector(IDeepSpeech sttClient)
+          VB: Public Sub New(sttClient As IDeepSpeech)
+        parameters:
+        - id: sttClient
+          type: DeepSpeechClient.Interfaces.IDeepSpeech
+      overload: IPM_Project.VoiceDetector.#ctor*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: IPM_Project.VoiceDetector.EnableLanguageModelAsync(System.String,System.String)
+      commentId: M:IPM_Project.VoiceDetector.EnableLanguageModelAsync(System.String,System.String)
+      language: CSharp
+      name:
+        CSharp: EnableLanguageModelAsync(String, String)
+        VB: EnableLanguageModelAsync(String, String)
+      nameWithType:
+        CSharp: VoiceDetector.EnableLanguageModelAsync(String, String)
+        VB: VoiceDetector.EnableLanguageModelAsync(String, String)
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.EnableLanguageModelAsync(System.String, System.String)
+        VB: IPM_Project.VoiceDetector.EnableLanguageModelAsync(System.String, System.String)
+      type: Method
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: EnableLanguageModelAsync
+        path: VoiceDetector.cs
+        startLine: 202
+      syntax:
+        content:
+          CSharp: public Task EnableLanguageModelAsync(string lmPath, string triePath)
+          VB: Public Function EnableLanguageModelAsync(lmPath As String, triePath As String) As Task
+        parameters:
+        - id: lmPath
+          type: System.String
+        - id: triePath
+          type: System.String
+        return:
+          type: System.Threading.Tasks.Task
+      overload: IPM_Project.VoiceDetector.EnableLanguageModelAsync*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+    - id: IPM_Project.VoiceDetector.ExecuteInferenceFromFileAsync
+      commentId: M:IPM_Project.VoiceDetector.ExecuteInferenceFromFileAsync
+      language: CSharp
+      name:
+        CSharp: ExecuteInferenceFromFileAsync()
+        VB: ExecuteInferenceFromFileAsync()
+      nameWithType:
+        CSharp: VoiceDetector.ExecuteInferenceFromFileAsync()
+        VB: VoiceDetector.ExecuteInferenceFromFileAsync()
+      qualifiedName:
+        CSharp: IPM_Project.VoiceDetector.ExecuteInferenceFromFileAsync()
+        VB: IPM_Project.VoiceDetector.ExecuteInferenceFromFileAsync()
+      type: Method
+      assemblies:
+      - IPM_Project
+      namespace: IPM_Project
+      source:
+        remote:
+          path: IPM_Project/VoiceDetector.cs
+          branch: master
+          repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+        id: ExecuteInferenceFromFileAsync
+        path: VoiceDetector.cs
+        startLine: 218
+      syntax:
+        content:
+          CSharp: public Task ExecuteInferenceFromFileAsync()
+          VB: Public Function ExecuteInferenceFromFileAsync As Task
+        return:
+          type: System.Threading.Tasks.Task
+      overload: IPM_Project.VoiceDetector.ExecuteInferenceFromFileAsync*
+      modifiers:
+        CSharp:
+        - public
+        VB:
+        - Public
+references:
+  System:
+    name:
+      CSharp:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+        isExternal: true
+      VB:
+      - name: System
+        nameWithType: System
+        qualifiedName: System
+    isDefinition: true
+    commentId: N:System
+  System.Object:
+    name:
+      CSharp:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      VB:
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Object
+  System.Object.ToString:
+    name:
+      CSharp:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ToString
+        name: ToString
+        nameWithType: Object.ToString
+        qualifiedName: System.Object.ToString
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ToString
+  System.Object.Equals(System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object)
+  System.Object.Equals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.Equals(System.Object,System.Object)
+        name: Equals
+        nameWithType: Object.Equals
+        qualifiedName: System.Object.Equals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.Equals(System.Object,System.Object)
+  System.Object.ReferenceEquals(System.Object,System.Object):
+    name:
+      CSharp:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.ReferenceEquals(System.Object,System.Object)
+        name: ReferenceEquals
+        nameWithType: Object.ReferenceEquals
+        qualifiedName: System.Object.ReferenceEquals
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Object
+        name: Object
+        nameWithType: Object
+        qualifiedName: System.Object
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  System.Object.GetHashCode:
+    name:
+      CSharp:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetHashCode
+        name: GetHashCode
+        nameWithType: Object.GetHashCode
+        qualifiedName: System.Object.GetHashCode
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetHashCode
+  System.Object.GetType:
+    name:
+      CSharp:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.GetType
+        name: GetType
+        nameWithType: Object.GetType
+        qualifiedName: System.Object.GetType
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.GetType
+  System.Object.MemberwiseClone:
+    name:
+      CSharp:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: System.Object.MemberwiseClone
+        name: MemberwiseClone
+        nameWithType: Object.MemberwiseClone
+        qualifiedName: System.Object.MemberwiseClone
+        isExternal: true
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: System.Object
+    commentId: M:System.Object.MemberwiseClone
+  System.ComponentModel:
+    name:
+      CSharp:
+      - name: System.ComponentModel
+        nameWithType: System.ComponentModel
+        qualifiedName: System.ComponentModel
+        isExternal: true
+      VB:
+      - name: System.ComponentModel
+        nameWithType: System.ComponentModel
+        qualifiedName: System.ComponentModel
+    isDefinition: true
+    commentId: N:System.ComponentModel
+  System.ComponentModel.INotifyPropertyChanged:
+    name:
+      CSharp:
+      - id: System.ComponentModel.INotifyPropertyChanged
+        name: INotifyPropertyChanged
+        nameWithType: INotifyPropertyChanged
+        qualifiedName: System.ComponentModel.INotifyPropertyChanged
+        isExternal: true
+      VB:
+      - id: System.ComponentModel.INotifyPropertyChanged
+        name: INotifyPropertyChanged
+        nameWithType: INotifyPropertyChanged
+        qualifiedName: System.ComponentModel.INotifyPropertyChanged
+        isExternal: true
+    isDefinition: true
+    parent: System.ComponentModel
+    commentId: T:System.ComponentModel.INotifyPropertyChanged
+  System.Boolean:
+    name:
+      CSharp:
+      - id: System.Boolean
+        name: Boolean
+        nameWithType: Boolean
+        qualifiedName: System.Boolean
+        isExternal: true
+      VB:
+      - id: System.Boolean
+        name: Boolean
+        nameWithType: Boolean
+        qualifiedName: System.Boolean
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Boolean
+  T:
+    name:
+      CSharp:
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      VB:
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+    isDefinition: true
+  '{T}':
+    name:
+      CSharp:
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      VB:
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+    isDefinition: false
+    definition: T
+    commentId: '!:T'
+  System.String:
+    name:
+      CSharp:
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      VB:
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.String
+  System.Action:
+    name:
+      CSharp:
+      - id: System.Action
+        name: Action
+        nameWithType: Action
+        qualifiedName: System.Action
+        isExternal: true
+      VB:
+      - id: System.Action
+        name: Action
+        nameWithType: Action
+        qualifiedName: System.Action
+        isExternal: true
+    isDefinition: true
+    parent: System
+    commentId: T:System.Action
+  IPM_Project.BindableBase.SetProperty*:
+    name:
+      CSharp:
+      - id: IPM_Project.BindableBase.SetProperty*
+        name: SetProperty
+        nameWithType: BindableBase.SetProperty
+        qualifiedName: IPM_Project.BindableBase.SetProperty
+      VB:
+      - id: IPM_Project.BindableBase.SetProperty*
+        name: SetProperty
+        nameWithType: BindableBase.SetProperty
+        qualifiedName: IPM_Project.BindableBase.SetProperty
+    isDefinition: true
+    commentId: Overload:IPM_Project.BindableBase.SetProperty
+  System.ComponentModel.PropertyChangedEventHandler:
+    name:
+      CSharp:
+      - id: System.ComponentModel.PropertyChangedEventHandler
+        name: PropertyChangedEventHandler
+        nameWithType: PropertyChangedEventHandler
+        qualifiedName: System.ComponentModel.PropertyChangedEventHandler
+        isExternal: true
+      VB:
+      - id: System.ComponentModel.PropertyChangedEventHandler
+        name: PropertyChangedEventHandler
+        nameWithType: PropertyChangedEventHandler
+        qualifiedName: System.ComponentModel.PropertyChangedEventHandler
+        isExternal: true
+    isDefinition: true
+    parent: System.ComponentModel
+    commentId: T:System.ComponentModel.PropertyChangedEventHandler
+  System.ComponentModel.INotifyPropertyChanged.PropertyChanged:
+    name:
+      CSharp:
+      - id: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+        name: PropertyChanged
+        nameWithType: INotifyPropertyChanged.PropertyChanged
+        qualifiedName: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+        isExternal: true
+      VB:
+      - id: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+        name: PropertyChanged
+        nameWithType: INotifyPropertyChanged.PropertyChanged
+        qualifiedName: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+        isExternal: true
+    isDefinition: true
+    parent: System.ComponentModel.INotifyPropertyChanged
+    commentId: E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  IPM_Project.BindableBase.OnPropertyChanged*:
+    name:
+      CSharp:
+      - id: IPM_Project.BindableBase.OnPropertyChanged*
+        name: OnPropertyChanged
+        nameWithType: BindableBase.OnPropertyChanged
+        qualifiedName: IPM_Project.BindableBase.OnPropertyChanged
+      VB:
+      - id: IPM_Project.BindableBase.OnPropertyChanged*
+        name: OnPropertyChanged
+        nameWithType: BindableBase.OnPropertyChanged
+        qualifiedName: IPM_Project.BindableBase.OnPropertyChanged
+    isDefinition: true
+    commentId: Overload:IPM_Project.BindableBase.OnPropertyChanged
+  IPM_Project.BindableBase:
+    name:
+      CSharp:
+      - id: IPM_Project.BindableBase
+        name: BindableBase
+        nameWithType: BindableBase
+        qualifiedName: IPM_Project.BindableBase
+      VB:
+      - id: IPM_Project.BindableBase
+        name: BindableBase
+        nameWithType: BindableBase
+        qualifiedName: IPM_Project.BindableBase
+    isDefinition: true
+    parent: IPM_Project
+    commentId: T:IPM_Project.BindableBase
+  IPM_Project.CommandInterpreter.VoiceCommandString*:
+    name:
+      CSharp:
+      - id: IPM_Project.CommandInterpreter.VoiceCommandString*
+        name: VoiceCommandString
+        nameWithType: CommandInterpreter.VoiceCommandString
+        qualifiedName: IPM_Project.CommandInterpreter.VoiceCommandString
+      VB:
+      - id: IPM_Project.CommandInterpreter.VoiceCommandString*
+        name: VoiceCommandString
+        nameWithType: CommandInterpreter.VoiceCommandString
+        qualifiedName: IPM_Project.CommandInterpreter.VoiceCommandString
+    isDefinition: true
+    commentId: Overload:IPM_Project.CommandInterpreter.VoiceCommandString
+  IPM_Project.CommandInterpreter.#ctor*:
+    name:
+      CSharp:
+      - id: IPM_Project.CommandInterpreter.#ctor*
+        name: CommandInterpreter
+        nameWithType: CommandInterpreter.CommandInterpreter
+        qualifiedName: IPM_Project.CommandInterpreter.CommandInterpreter
+      VB:
+      - id: IPM_Project.CommandInterpreter.#ctor*
+        name: CommandInterpreter
+        nameWithType: CommandInterpreter.CommandInterpreter
+        qualifiedName: IPM_Project.CommandInterpreter.CommandInterpreter
+    isDefinition: true
+    commentId: Overload:IPM_Project.CommandInterpreter.#ctor
+  IPM_Project:
+    name:
+      CSharp:
+      - name: IPM_Project
+        nameWithType: IPM_Project
+        qualifiedName: IPM_Project
+      VB:
+      - name: IPM_Project
+        nameWithType: IPM_Project
+        qualifiedName: IPM_Project
+    isDefinition: true
+    commentId: N:IPM_Project
+  IPM_Project.CommandType:
+    name:
+      CSharp:
+      - id: IPM_Project.CommandType
+        name: CommandType
+        nameWithType: CommandType
+        qualifiedName: IPM_Project.CommandType
+      VB:
+      - id: IPM_Project.CommandType
+        name: CommandType
+        nameWithType: CommandType
+        qualifiedName: IPM_Project.CommandType
+    isDefinition: true
+    parent: IPM_Project
+    commentId: T:IPM_Project.CommandType
+  IPM_Project.CommandInterpreter.InterpretCommandKeywords*:
+    name:
+      CSharp:
+      - id: IPM_Project.CommandInterpreter.InterpretCommandKeywords*
+        name: InterpretCommandKeywords
+        nameWithType: CommandInterpreter.InterpretCommandKeywords
+        qualifiedName: IPM_Project.CommandInterpreter.InterpretCommandKeywords
+      VB:
+      - id: IPM_Project.CommandInterpreter.InterpretCommandKeywords*
+        name: InterpretCommandKeywords
+        nameWithType: CommandInterpreter.InterpretCommandKeywords
+        qualifiedName: IPM_Project.CommandInterpreter.InterpretCommandKeywords
+    isDefinition: true
+    commentId: Overload:IPM_Project.CommandInterpreter.InterpretCommandKeywords
+  IPM_Project.CommandInterpreter:
+    name:
+      CSharp:
+      - id: IPM_Project.CommandInterpreter
+        name: CommandInterpreter
+        nameWithType: CommandInterpreter
+        qualifiedName: IPM_Project.CommandInterpreter
+      VB:
+      - id: IPM_Project.CommandInterpreter
+        name: CommandInterpreter
+        nameWithType: CommandInterpreter
+        qualifiedName: IPM_Project.CommandInterpreter
+    isDefinition: true
+    commentId: T:IPM_Project.CommandInterpreter
+  IPM_Project.IPMVocal:
+    name:
+      CSharp:
+      - id: IPM_Project.IPMVocal
+        name: IPMVocal
+        nameWithType: IPMVocal
+        qualifiedName: IPM_Project.IPMVocal
+      VB:
+      - id: IPM_Project.IPMVocal
+        name: IPMVocal
+        nameWithType: IPMVocal
+        qualifiedName: IPM_Project.IPMVocal
+    isDefinition: true
+    parent: IPM_Project
+    commentId: T:IPM_Project.IPMVocal
+  IPM_Project.IPMVocal.GetInstance*:
+    name:
+      CSharp:
+      - id: IPM_Project.IPMVocal.GetInstance*
+        name: GetInstance
+        nameWithType: IPMVocal.GetInstance
+        qualifiedName: IPM_Project.IPMVocal.GetInstance
+      VB:
+      - id: IPM_Project.IPMVocal.GetInstance*
+        name: GetInstance
+        nameWithType: IPMVocal.GetInstance
+        qualifiedName: IPM_Project.IPMVocal.GetInstance
+    isDefinition: true
+    commentId: Overload:IPM_Project.IPMVocal.GetInstance
+  IPM_Project.RedisIntermediate.#ctor*:
+    name:
+      CSharp:
+      - id: IPM_Project.RedisIntermediate.#ctor*
+        name: RedisIntermediate
+        nameWithType: RedisIntermediate.RedisIntermediate
+        qualifiedName: IPM_Project.RedisIntermediate.RedisIntermediate
+      VB:
+      - id: IPM_Project.RedisIntermediate.#ctor*
+        name: RedisIntermediate
+        nameWithType: RedisIntermediate.RedisIntermediate
+        qualifiedName: IPM_Project.RedisIntermediate.RedisIntermediate
+    isDefinition: true
+    commentId: Overload:IPM_Project.RedisIntermediate.#ctor
+  IPM_Project.RedisIntermediate.SendRequest*:
+    name:
+      CSharp:
+      - id: IPM_Project.RedisIntermediate.SendRequest*
+        name: SendRequest
+        nameWithType: RedisIntermediate.SendRequest
+        qualifiedName: IPM_Project.RedisIntermediate.SendRequest
+      VB:
+      - id: IPM_Project.RedisIntermediate.SendRequest*
+        name: SendRequest
+        nameWithType: RedisIntermediate.SendRequest
+        qualifiedName: IPM_Project.RedisIntermediate.SendRequest
+    isDefinition: true
+    commentId: Overload:IPM_Project.RedisIntermediate.SendRequest
+  IPM_Project.RedisIntermediate:
+    name:
+      CSharp:
+      - id: IPM_Project.RedisIntermediate
+        name: RedisIntermediate
+        nameWithType: RedisIntermediate
+        qualifiedName: IPM_Project.RedisIntermediate
+      VB:
+      - id: IPM_Project.RedisIntermediate
+        name: RedisIntermediate
+        nameWithType: RedisIntermediate
+        qualifiedName: IPM_Project.RedisIntermediate
+    isDefinition: true
+    commentId: T:IPM_Project.RedisIntermediate
+  IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action):
+    name:
+      CSharp:
+      - id: IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action)
+        name: SetProperty<T>
+        nameWithType: BindableBase.SetProperty<T>
+        qualifiedName: IPM_Project.BindableBase.SetProperty<T>
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Action
+        name: Action
+        nameWithType: Action
+        qualifiedName: System.Action
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action)
+        name: SetProperty(Of T)
+        nameWithType: BindableBase.SetProperty(Of T)
+        qualifiedName: IPM_Project.BindableBase.SetProperty(Of T)
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Action
+        name: Action
+        nameWithType: Action
+        qualifiedName: System.Action
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: M:IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action)
+  IPM_Project.BindableBase.SetProperty``1({T}@,{T},System.String,System.Action):
+    name:
+      CSharp:
+      - id: IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action)
+        name: SetProperty<T>
+        nameWithType: BindableBase.SetProperty<T>
+        qualifiedName: IPM_Project.BindableBase.SetProperty<T>
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Action
+        name: Action
+        nameWithType: Action
+        qualifiedName: System.Action
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action)
+        name: SetProperty(Of T)
+        nameWithType: BindableBase.SetProperty(Of T)
+        qualifiedName: IPM_Project.BindableBase.SetProperty(Of T)
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: ', '
+        nameWithType: ', '
+        qualifiedName: ', '
+      - id: System.Action
+        name: Action
+        nameWithType: Action
+        qualifiedName: System.Action
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action)
+    parent: IPM_Project.BindableBase
+    commentId: M:IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action)
+  IPM_Project.BindableBase.PropertyChanged:
+    name:
+      CSharp:
+      - id: IPM_Project.BindableBase.PropertyChanged
+        name: PropertyChanged
+        nameWithType: BindableBase.PropertyChanged
+        qualifiedName: IPM_Project.BindableBase.PropertyChanged
+      VB:
+      - id: IPM_Project.BindableBase.PropertyChanged
+        name: PropertyChanged
+        nameWithType: BindableBase.PropertyChanged
+        qualifiedName: IPM_Project.BindableBase.PropertyChanged
+    isDefinition: true
+    parent: IPM_Project.BindableBase
+    commentId: E:IPM_Project.BindableBase.PropertyChanged
+  IPM_Project.BindableBase.OnPropertyChanged(System.String):
+    name:
+      CSharp:
+      - id: IPM_Project.BindableBase.OnPropertyChanged(System.String)
+        name: OnPropertyChanged
+        nameWithType: BindableBase.OnPropertyChanged
+        qualifiedName: IPM_Project.BindableBase.OnPropertyChanged
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+      VB:
+      - id: IPM_Project.BindableBase.OnPropertyChanged(System.String)
+        name: OnPropertyChanged
+        nameWithType: BindableBase.OnPropertyChanged
+        qualifiedName: IPM_Project.BindableBase.OnPropertyChanged
+      - name: (
+        nameWithType: (
+        qualifiedName: (
+      - id: System.String
+        name: String
+        nameWithType: String
+        qualifiedName: System.String
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    parent: IPM_Project.BindableBase
+    commentId: M:IPM_Project.BindableBase.OnPropertyChanged(System.String)
+  AsyncAwaitBestPractices.MVVM:
+    name:
+      CSharp:
+      - name: AsyncAwaitBestPractices.MVVM
+        nameWithType: AsyncAwaitBestPractices.MVVM
+        qualifiedName: AsyncAwaitBestPractices.MVVM
+        isExternal: true
+      VB:
+      - name: AsyncAwaitBestPractices.MVVM
+        nameWithType: AsyncAwaitBestPractices.MVVM
+        qualifiedName: AsyncAwaitBestPractices.MVVM
+    isDefinition: true
+    commentId: N:AsyncAwaitBestPractices.MVVM
+  AsyncAwaitBestPractices.MVVM.IAsyncCommand:
+    name:
+      CSharp:
+      - id: AsyncAwaitBestPractices.MVVM.IAsyncCommand
+        name: IAsyncCommand
+        nameWithType: IAsyncCommand
+        qualifiedName: AsyncAwaitBestPractices.MVVM.IAsyncCommand
+        isExternal: true
+      VB:
+      - id: AsyncAwaitBestPractices.MVVM.IAsyncCommand
+        name: IAsyncCommand
+        nameWithType: IAsyncCommand
+        qualifiedName: AsyncAwaitBestPractices.MVVM.IAsyncCommand
+        isExternal: true
+    isDefinition: true
+    parent: AsyncAwaitBestPractices.MVVM
+    commentId: T:AsyncAwaitBestPractices.MVVM.IAsyncCommand
+  IPM_Project.VoiceDetector.InferenceFromFileCommand*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.InferenceFromFileCommand*
+        name: InferenceFromFileCommand
+        nameWithType: VoiceDetector.InferenceFromFileCommand
+        qualifiedName: IPM_Project.VoiceDetector.InferenceFromFileCommand
+      VB:
+      - id: IPM_Project.VoiceDetector.InferenceFromFileCommand*
+        name: InferenceFromFileCommand
+        nameWithType: VoiceDetector.InferenceFromFileCommand
+        qualifiedName: IPM_Project.VoiceDetector.InferenceFromFileCommand
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.InferenceFromFileCommand
+  GalaSoft.MvvmLight.Command:
+    name:
+      CSharp:
+      - name: GalaSoft.MvvmLight.Command
+        nameWithType: GalaSoft.MvvmLight.Command
+        qualifiedName: GalaSoft.MvvmLight.Command
+        isExternal: true
+      VB:
+      - name: GalaSoft.MvvmLight.Command
+        nameWithType: GalaSoft.MvvmLight.Command
+        qualifiedName: GalaSoft.MvvmLight.Command
+    isDefinition: true
+    commentId: N:GalaSoft.MvvmLight.Command
+  GalaSoft.MvvmLight.Command.RelayCommand:
+    name:
+      CSharp:
+      - id: GalaSoft.MvvmLight.Command.RelayCommand
+        name: RelayCommand
+        nameWithType: RelayCommand
+        qualifiedName: GalaSoft.MvvmLight.Command.RelayCommand
+        isExternal: true
+      VB:
+      - id: GalaSoft.MvvmLight.Command.RelayCommand
+        name: RelayCommand
+        nameWithType: RelayCommand
+        qualifiedName: GalaSoft.MvvmLight.Command.RelayCommand
+        isExternal: true
+    isDefinition: true
+    parent: GalaSoft.MvvmLight.Command
+    commentId: T:GalaSoft.MvvmLight.Command.RelayCommand
+  IPM_Project.VoiceDetector.StartRecordingCommand*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.StartRecordingCommand*
+        name: StartRecordingCommand
+        nameWithType: VoiceDetector.StartRecordingCommand
+        qualifiedName: IPM_Project.VoiceDetector.StartRecordingCommand
+      VB:
+      - id: IPM_Project.VoiceDetector.StartRecordingCommand*
+        name: StartRecordingCommand
+        nameWithType: VoiceDetector.StartRecordingCommand
+        qualifiedName: IPM_Project.VoiceDetector.StartRecordingCommand
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.StartRecordingCommand
+  IPM_Project.VoiceDetector.StopRecordingCommand*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.StopRecordingCommand*
+        name: StopRecordingCommand
+        nameWithType: VoiceDetector.StopRecordingCommand
+        qualifiedName: IPM_Project.VoiceDetector.StopRecordingCommand
+      VB:
+      - id: IPM_Project.VoiceDetector.StopRecordingCommand*
+        name: StopRecordingCommand
+        nameWithType: VoiceDetector.StopRecordingCommand
+        qualifiedName: IPM_Project.VoiceDetector.StopRecordingCommand
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.StopRecordingCommand
+  IPM_Project.VoiceDetector.StreamingIsBusy*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.StreamingIsBusy*
+        name: StreamingIsBusy
+        nameWithType: VoiceDetector.StreamingIsBusy
+        qualifiedName: IPM_Project.VoiceDetector.StreamingIsBusy
+      VB:
+      - id: IPM_Project.VoiceDetector.StreamingIsBusy*
+        name: StreamingIsBusy
+        nameWithType: VoiceDetector.StreamingIsBusy
+        qualifiedName: IPM_Project.VoiceDetector.StreamingIsBusy
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.StreamingIsBusy
+  IPM_Project.VoiceDetector.EnableStartRecord*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.EnableStartRecord*
+        name: EnableStartRecord
+        nameWithType: VoiceDetector.EnableStartRecord
+        qualifiedName: IPM_Project.VoiceDetector.EnableStartRecord
+      VB:
+      - id: IPM_Project.VoiceDetector.EnableStartRecord*
+        name: EnableStartRecord
+        nameWithType: VoiceDetector.EnableStartRecord
+        qualifiedName: IPM_Project.VoiceDetector.EnableStartRecord
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.EnableStartRecord
+  IPM_Project.VoiceDetector.EnableStopRecord*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.EnableStopRecord*
+        name: EnableStopRecord
+        nameWithType: VoiceDetector.EnableStopRecord
+        qualifiedName: IPM_Project.VoiceDetector.EnableStopRecord
+      VB:
+      - id: IPM_Project.VoiceDetector.EnableStopRecord*
+        name: EnableStopRecord
+        nameWithType: VoiceDetector.EnableStopRecord
+        qualifiedName: IPM_Project.VoiceDetector.EnableStopRecord
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.EnableStopRecord
+  CSCore.CoreAudioAPI:
+    name:
+      CSharp:
+      - name: CSCore.CoreAudioAPI
+        nameWithType: CSCore.CoreAudioAPI
+        qualifiedName: CSCore.CoreAudioAPI
+        isExternal: true
+      VB:
+      - name: CSCore.CoreAudioAPI
+        nameWithType: CSCore.CoreAudioAPI
+        qualifiedName: CSCore.CoreAudioAPI
+    isDefinition: true
+    commentId: N:CSCore.CoreAudioAPI
+  CSCore.CoreAudioAPI.MMDevice:
+    name:
+      CSharp:
+      - id: CSCore.CoreAudioAPI.MMDevice
+        name: MMDevice
+        nameWithType: MMDevice
+        qualifiedName: CSCore.CoreAudioAPI.MMDevice
+        isExternal: true
+      VB:
+      - id: CSCore.CoreAudioAPI.MMDevice
+        name: MMDevice
+        nameWithType: MMDevice
+        qualifiedName: CSCore.CoreAudioAPI.MMDevice
+        isExternal: true
+    isDefinition: true
+    parent: CSCore.CoreAudioAPI
+    commentId: T:CSCore.CoreAudioAPI.MMDevice
+  IPM_Project.VoiceDetector.SelectedDevice*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.SelectedDevice*
+        name: SelectedDevice
+        nameWithType: VoiceDetector.SelectedDevice
+        qualifiedName: IPM_Project.VoiceDetector.SelectedDevice
+      VB:
+      - id: IPM_Project.VoiceDetector.SelectedDevice*
+        name: SelectedDevice
+        nameWithType: VoiceDetector.SelectedDevice
+        qualifiedName: IPM_Project.VoiceDetector.SelectedDevice
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.SelectedDevice
+  IPM_Project.VoiceDetector.StatusMessage*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.StatusMessage*
+        name: StatusMessage
+        nameWithType: VoiceDetector.StatusMessage
+        qualifiedName: IPM_Project.VoiceDetector.StatusMessage
+      VB:
+      - id: IPM_Project.VoiceDetector.StatusMessage*
+        name: StatusMessage
+        nameWithType: VoiceDetector.StatusMessage
+        qualifiedName: IPM_Project.VoiceDetector.StatusMessage
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.StatusMessage
+  IPM_Project.VoiceDetector.Transcription*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.Transcription*
+        name: Transcription
+        nameWithType: VoiceDetector.Transcription
+        qualifiedName: IPM_Project.VoiceDetector.Transcription
+      VB:
+      - id: IPM_Project.VoiceDetector.Transcription*
+        name: Transcription
+        nameWithType: VoiceDetector.Transcription
+        qualifiedName: IPM_Project.VoiceDetector.Transcription
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.Transcription
+  IPM_Project.VoiceDetector.AudioFilePath*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.AudioFilePath*
+        name: AudioFilePath
+        nameWithType: VoiceDetector.AudioFilePath
+        qualifiedName: IPM_Project.VoiceDetector.AudioFilePath
+      VB:
+      - id: IPM_Project.VoiceDetector.AudioFilePath*
+        name: AudioFilePath
+        nameWithType: VoiceDetector.AudioFilePath
+        qualifiedName: IPM_Project.VoiceDetector.AudioFilePath
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.AudioFilePath
+  System.Collections.ObjectModel.ObservableCollection`1:
+    name:
+      CSharp:
+      - id: System.Collections.ObjectModel.ObservableCollection`1
+        name: ObservableCollection
+        nameWithType: ObservableCollection
+        qualifiedName: System.Collections.ObjectModel.ObservableCollection
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.ObjectModel.ObservableCollection`1
+        name: ObservableCollection
+        nameWithType: ObservableCollection
+        qualifiedName: System.Collections.ObjectModel.ObservableCollection
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - name: T
+        nameWithType: T
+        qualifiedName: T
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: true
+    commentId: T:System.Collections.ObjectModel.ObservableCollection`1
+  System.Collections.ObjectModel:
+    name:
+      CSharp:
+      - name: System.Collections.ObjectModel
+        nameWithType: System.Collections.ObjectModel
+        qualifiedName: System.Collections.ObjectModel
+        isExternal: true
+      VB:
+      - name: System.Collections.ObjectModel
+        nameWithType: System.Collections.ObjectModel
+        qualifiedName: System.Collections.ObjectModel
+    isDefinition: true
+    commentId: N:System.Collections.ObjectModel
+  System.Collections.ObjectModel.ObservableCollection{CSCore.CoreAudioAPI.MMDevice}:
+    name:
+      CSharp:
+      - id: System.Collections.ObjectModel.ObservableCollection`1
+        name: ObservableCollection
+        nameWithType: ObservableCollection
+        qualifiedName: System.Collections.ObjectModel.ObservableCollection
+        isExternal: true
+      - name: <
+        nameWithType: <
+        qualifiedName: <
+      - id: CSCore.CoreAudioAPI.MMDevice
+        name: MMDevice
+        nameWithType: MMDevice
+        qualifiedName: CSCore.CoreAudioAPI.MMDevice
+        isExternal: true
+      - name: '>'
+        nameWithType: '>'
+        qualifiedName: '>'
+      VB:
+      - id: System.Collections.ObjectModel.ObservableCollection`1
+        name: ObservableCollection
+        nameWithType: ObservableCollection
+        qualifiedName: System.Collections.ObjectModel.ObservableCollection
+        isExternal: true
+      - name: '(Of '
+        nameWithType: '(Of '
+        qualifiedName: '(Of '
+      - id: CSCore.CoreAudioAPI.MMDevice
+        name: MMDevice
+        nameWithType: MMDevice
+        qualifiedName: CSCore.CoreAudioAPI.MMDevice
+        isExternal: true
+      - name: )
+        nameWithType: )
+        qualifiedName: )
+    isDefinition: false
+    definition: System.Collections.ObjectModel.ObservableCollection`1
+    parent: System.Collections.ObjectModel
+    commentId: T:System.Collections.ObjectModel.ObservableCollection{CSCore.CoreAudioAPI.MMDevice}
+  IPM_Project.VoiceDetector.AvailableRecordDevices*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.AvailableRecordDevices*
+        name: AvailableRecordDevices
+        nameWithType: VoiceDetector.AvailableRecordDevices
+        qualifiedName: IPM_Project.VoiceDetector.AvailableRecordDevices
+      VB:
+      - id: IPM_Project.VoiceDetector.AvailableRecordDevices*
+        name: AvailableRecordDevices
+        nameWithType: VoiceDetector.AvailableRecordDevices
+        qualifiedName: IPM_Project.VoiceDetector.AvailableRecordDevices
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.AvailableRecordDevices
+  DeepSpeechClient.Interfaces:
+    name:
+      CSharp:
+      - name: DeepSpeechClient.Interfaces
+        nameWithType: DeepSpeechClient.Interfaces
+        qualifiedName: DeepSpeechClient.Interfaces
+        isExternal: true
+      VB:
+      - name: DeepSpeechClient.Interfaces
+        nameWithType: DeepSpeechClient.Interfaces
+        qualifiedName: DeepSpeechClient.Interfaces
+    isDefinition: true
+    commentId: N:DeepSpeechClient.Interfaces
+  DeepSpeechClient.Interfaces.IDeepSpeech:
+    name:
+      CSharp:
+      - id: DeepSpeechClient.Interfaces.IDeepSpeech
+        name: IDeepSpeech
+        nameWithType: IDeepSpeech
+        qualifiedName: DeepSpeechClient.Interfaces.IDeepSpeech
+        isExternal: true
+      VB:
+      - id: DeepSpeechClient.Interfaces.IDeepSpeech
+        name: IDeepSpeech
+        nameWithType: IDeepSpeech
+        qualifiedName: DeepSpeechClient.Interfaces.IDeepSpeech
+        isExternal: true
+    isDefinition: true
+    parent: DeepSpeechClient.Interfaces
+    commentId: T:DeepSpeechClient.Interfaces.IDeepSpeech
+  IPM_Project.VoiceDetector.#ctor*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.#ctor*
+        name: VoiceDetector
+        nameWithType: VoiceDetector.VoiceDetector
+        qualifiedName: IPM_Project.VoiceDetector.VoiceDetector
+      VB:
+      - id: IPM_Project.VoiceDetector.#ctor*
+        name: VoiceDetector
+        nameWithType: VoiceDetector.VoiceDetector
+        qualifiedName: IPM_Project.VoiceDetector.VoiceDetector
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.#ctor
+  System.Threading.Tasks:
+    name:
+      CSharp:
+      - name: System.Threading.Tasks
+        nameWithType: System.Threading.Tasks
+        qualifiedName: System.Threading.Tasks
+        isExternal: true
+      VB:
+      - name: System.Threading.Tasks
+        nameWithType: System.Threading.Tasks
+        qualifiedName: System.Threading.Tasks
+    isDefinition: true
+    commentId: N:System.Threading.Tasks
+  System.Threading.Tasks.Task:
+    name:
+      CSharp:
+      - id: System.Threading.Tasks.Task
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+      VB:
+      - id: System.Threading.Tasks.Task
+        name: Task
+        nameWithType: Task
+        qualifiedName: System.Threading.Tasks.Task
+        isExternal: true
+    isDefinition: true
+    parent: System.Threading.Tasks
+    commentId: T:System.Threading.Tasks.Task
+  IPM_Project.VoiceDetector.EnableLanguageModelAsync*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.EnableLanguageModelAsync*
+        name: EnableLanguageModelAsync
+        nameWithType: VoiceDetector.EnableLanguageModelAsync
+        qualifiedName: IPM_Project.VoiceDetector.EnableLanguageModelAsync
+      VB:
+      - id: IPM_Project.VoiceDetector.EnableLanguageModelAsync*
+        name: EnableLanguageModelAsync
+        nameWithType: VoiceDetector.EnableLanguageModelAsync
+        qualifiedName: IPM_Project.VoiceDetector.EnableLanguageModelAsync
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.EnableLanguageModelAsync
+  IPM_Project.VoiceDetector.ExecuteInferenceFromFileAsync*:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector.ExecuteInferenceFromFileAsync*
+        name: ExecuteInferenceFromFileAsync
+        nameWithType: VoiceDetector.ExecuteInferenceFromFileAsync
+        qualifiedName: IPM_Project.VoiceDetector.ExecuteInferenceFromFileAsync
+      VB:
+      - id: IPM_Project.VoiceDetector.ExecuteInferenceFromFileAsync*
+        name: ExecuteInferenceFromFileAsync
+        nameWithType: VoiceDetector.ExecuteInferenceFromFileAsync
+        qualifiedName: IPM_Project.VoiceDetector.ExecuteInferenceFromFileAsync
+    isDefinition: true
+    commentId: Overload:IPM_Project.VoiceDetector.ExecuteInferenceFromFileAsync
+  IPM_Project.VoiceDetector:
+    name:
+      CSharp:
+      - id: IPM_Project.VoiceDetector
+        name: VoiceDetector
+        nameWithType: VoiceDetector
+        qualifiedName: IPM_Project.VoiceDetector
+      VB:
+      - id: IPM_Project.VoiceDetector
+        name: VoiceDetector
+        nameWithType: VoiceDetector
+        qualifiedName: IPM_Project.VoiceDetector
+    isDefinition: true
+    commentId: T:IPM_Project.VoiceDetector

@@ -3,33 +3,40 @@ using StackExchange.Redis;
 
 namespace IPM_Project
 {
-    /**
-	 * Class used to communicate with Redis server
-	 */
+
+    /// <summary>
+    /// Class used to communicate with Redis server
+    /// </summary>
     public class RedisIntermediate {
         
 		
         private IDatabase Connection;
         private readonly ConnectionMultiplexer Muxer;
 
-        /**
-		 * Constructor
-		 */
+
+        /// <summary>
+        /// Constructor
+        /// TODO.
+        /// </summary>
         public RedisIntermediate() {
             
             Muxer = ConnectionMultiplexer.Connect("dakeoz.fr:6379,password=salut");
             Connection = Muxer.GetDatabase();
         }
 
-        /**
-         * Sends request to Redis Server
-		 * in: CommandType corresponding to the function type
-         */
+        
+        /// <summary>
+        /// Sends request to Redis Server
+        /// </summary>
+        /// <param name="request">TODO.</param>
+        /// <param name="CommandType">corresponding to the function type.</param> 
         public async void SendRequest(string request, CommandType commandType) {
             
             try
             {
-                if (request == null && commandType.ToString() == null) return;
+                if (request == null && commandType.ToString() == null) {
+                    return;
+                }
 
                 string fullRequest = commandType.ToString() + "::" + request;
 					

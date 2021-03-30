@@ -1,0 +1,541 @@
+### YamlMime:ManagedReference
+items:
+- uid: IPM_Project.BindableBase
+  commentId: T:IPM_Project.BindableBase
+  id: BindableBase
+  parent: IPM_Project
+  children:
+  - IPM_Project.BindableBase.OnPropertyChanged(System.String)
+  - IPM_Project.BindableBase.PropertyChanged
+  - IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action)
+  langs:
+  - csharp
+  - vb
+  name: BindableBase
+  nameWithType: BindableBase
+  fullName: IPM_Project.BindableBase
+  type: Class
+  source:
+    remote:
+      path: IPM_Project/BindableBase.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: BindableBase
+    path: BindableBase.cs
+    startLine: 9
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  summary: "\nTODO: Doc.\n"
+  example: []
+  syntax:
+    content: 'public class BindableBase : INotifyPropertyChanged'
+    content.vb: >-
+      Public Class BindableBase
+          Implements INotifyPropertyChanged
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - IPM_Project.VoiceDetector
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action)
+  commentId: M:IPM_Project.BindableBase.SetProperty``1(``0@,``0,System.String,System.Action)
+  id: SetProperty``1(``0@,``0,System.String,System.Action)
+  parent: IPM_Project.BindableBase
+  langs:
+  - csharp
+  - vb
+  name: SetProperty<T>(ref T, T, String, Action)
+  nameWithType: BindableBase.SetProperty<T>(ref T, T, String, Action)
+  fullName: IPM_Project.BindableBase.SetProperty<T>(ref T, T, System.String, System.Action)
+  type: Method
+  source:
+    remote:
+      path: IPM_Project/BindableBase.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: SetProperty
+    path: BindableBase.cs
+    startLine: 19
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  summary: "\nTODO: Doc.\n"
+  example: []
+  syntax:
+    content: protected bool SetProperty<T>(ref T backingStore, T value, string propertyName = "", Action onChanged = null)
+    parameters:
+    - id: backingStore
+      type: '{T}'
+      description: ''
+    - id: value
+      type: '{T}'
+      description: ''
+    - id: propertyName
+      type: System.String
+      description: ''
+    - id: onChanged
+      type: System.Action
+      description: ''
+    typeParameters:
+    - id: T
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Protected Function SetProperty(Of T)(ByRef backingStore As T, value As T, propertyName As String = "", onChanged As Action = Nothing) As Boolean
+  overload: IPM_Project.BindableBase.SetProperty*
+  nameWithType.vb: BindableBase.SetProperty(Of T)(ByRef T, T, String, Action)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: IPM_Project.BindableBase.SetProperty(Of T)(ByRef T, T, System.String, System.Action)
+  name.vb: SetProperty(Of T)(ByRef T, T, String, Action)
+- uid: IPM_Project.BindableBase.PropertyChanged
+  commentId: E:IPM_Project.BindableBase.PropertyChanged
+  id: PropertyChanged
+  parent: IPM_Project.BindableBase
+  langs:
+  - csharp
+  - vb
+  name: PropertyChanged
+  nameWithType: BindableBase.PropertyChanged
+  fullName: IPM_Project.BindableBase.PropertyChanged
+  type: Event
+  source:
+    remote:
+      path: IPM_Project/BindableBase.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: PropertyChanged
+    path: BindableBase.cs
+    startLine: 31
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  syntax:
+    content: public event PropertyChangedEventHandler PropertyChanged
+    return:
+      type: System.ComponentModel.PropertyChangedEventHandler
+    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
+  implements:
+  - System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IPM_Project.BindableBase.OnPropertyChanged(System.String)
+  commentId: M:IPM_Project.BindableBase.OnPropertyChanged(System.String)
+  id: OnPropertyChanged(System.String)
+  parent: IPM_Project.BindableBase
+  langs:
+  - csharp
+  - vb
+  name: OnPropertyChanged(String)
+  nameWithType: BindableBase.OnPropertyChanged(String)
+  fullName: IPM_Project.BindableBase.OnPropertyChanged(System.String)
+  type: Method
+  source:
+    remote:
+      path: IPM_Project/BindableBase.cs
+      branch: master
+      repo: https://github.com/DaKeoZ/DeepSpeech-IPM.git
+    id: OnPropertyChanged
+    path: BindableBase.cs
+    startLine: 32
+  assemblies:
+  - IPM_Project
+  namespace: IPM_Project
+  syntax:
+    content: protected void OnPropertyChanged(string propertyName = "")
+    parameters:
+    - id: propertyName
+      type: System.String
+    content.vb: Protected Sub OnPropertyChanged(propertyName As String = "")
+  overload: IPM_Project.BindableBase.OnPropertyChanged*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: IPM_Project
+  commentId: N:IPM_Project
+  name: IPM_Project
+  nameWithType: IPM_Project
+  fullName: IPM_Project
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.ComponentModel.INotifyPropertyChanged
+  commentId: T:System.ComponentModel.INotifyPropertyChanged
+  parent: System.ComponentModel
+  isExternal: true
+  name: INotifyPropertyChanged
+  nameWithType: INotifyPropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+- uid: IPM_Project.BindableBase.SetProperty*
+  commentId: Overload:IPM_Project.BindableBase.SetProperty
+  name: SetProperty
+  nameWithType: BindableBase.SetProperty
+  fullName: IPM_Project.BindableBase.SetProperty
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  commentId: E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+  parent: System.ComponentModel.INotifyPropertyChanged
+  isExternal: true
+  name: PropertyChanged
+  nameWithType: INotifyPropertyChanged.PropertyChanged
+  fullName: System.ComponentModel.INotifyPropertyChanged.PropertyChanged
+- uid: System.ComponentModel.PropertyChangedEventHandler
+  commentId: T:System.ComponentModel.PropertyChangedEventHandler
+  parent: System.ComponentModel
+  isExternal: true
+  name: PropertyChangedEventHandler
+  nameWithType: PropertyChangedEventHandler
+  fullName: System.ComponentModel.PropertyChangedEventHandler
+- uid: IPM_Project.BindableBase.OnPropertyChanged*
+  commentId: Overload:IPM_Project.BindableBase.OnPropertyChanged
+  name: OnPropertyChanged
+  nameWithType: BindableBase.OnPropertyChanged
+  fullName: IPM_Project.BindableBase.OnPropertyChanged

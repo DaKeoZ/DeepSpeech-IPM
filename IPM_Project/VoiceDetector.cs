@@ -161,7 +161,13 @@ namespace IPM_Project
                 _audioCapture = SelectedDevice.DataFlow == DataFlow.Capture ?
                     new WasapiCapture() : new WasapiLoopbackCapture();
                 _audioCapture.Device = SelectedDevice;
-                _audioCapture.Initialize();
+                try {
+                    _audioCapture.Initialize();
+                }
+                catch (CoreAudioAPIException e) {
+                    Console.Write("Périphérique d'enregistrement audio en cours d'utilisation par une autre application.");
+                }
+
                 _audioCapture.DataAvailable += Capture_DataAvailable;
                 _soundInSource = new SoundInSource(_audioCapture) { FillWithZeros = false };
                 _convertedSource = _soundInSource

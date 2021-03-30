@@ -3,9 +3,10 @@
 namespace IPM_Project
 {
     public enum CommandType {
-        /**
-         * Default type: Error, used when no key word are detected
-         */
+        
+        /// <summary>
+        /// 
+        /// </summary>
         [field:Description("erreur")]
         Error,
         /**
