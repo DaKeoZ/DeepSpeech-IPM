@@ -20,7 +20,7 @@ namespace IPM_Project
 
         /// <summary>
         /// Constructor
-        /// TODO.
+        /// Initialize JSON and connects to redis host.
         /// </summary>
         public RedisIntermediate() {
 
@@ -40,8 +40,8 @@ namespace IPM_Project
         /// <summary>
         /// Sends request to Redis Server
         /// </summary>
-        /// <param name="request">TODO.</param>
-        /// <param name="CommandType">corresponding to the function type.</param> 
+        /// <param name="request">Request associated to the commandtype.</param>
+        /// <param name="CommandType">corresponding to the function type.</para 
         public async void SendRequest(string request, CommandType commandType) {
             
             try
@@ -62,6 +62,9 @@ namespace IPM_Project
 
         }
 
+        /// <summary>
+        /// Initialize JSON File
+        /// </summary>
         private void InitJSONFile() {
 
             RedisConfiguration redisConfiguration = new RedisConfiguration();
@@ -77,6 +80,9 @@ namespace IPM_Project
 
         }
 
+        /// <summary>
+        /// Read JSON data from the config file
+        /// </summary>
         private void ReadJSONData() {
             
             using (StreamReader r = new StreamReader(@"..\\..\\appsettings.json"))
@@ -84,9 +90,15 @@ namespace IPM_Project
                 string json = r.ReadToEnd();
                 RedisConfiguration redisConfiguration = JsonConvert.DeserializeObject<RedisConfiguration>(json);
 
-                _redisHost = redisConfiguration.RedisHost;
-                _redisPort = redisConfiguration.RedisPort;
-                _redisPassword = redisConfiguration.RedisPassword;
+                if (redisConfiguration != null) {
+                    _redisHost = redisConfiguration.RedisHost;
+                    _redisPort = redisConfiguration.RedisPort;
+                    _redisPassword = redisConfiguration.RedisPassword;
+                } else {
+                    _redisHost = redisConfiguration.RedisHost;
+                    _redisPort = redisConfiguration.RedisPort;
+                    _redisPassword = redisConfiguration.RedisPassword;
+                }
             }
 
         }

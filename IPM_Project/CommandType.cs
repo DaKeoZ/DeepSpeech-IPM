@@ -5,13 +5,13 @@ namespace IPM_Project
     public enum CommandType {
         
         /// <summary>
-        /// Basic error cas.
+        /// Basic error case.
         /// keyword: Any unrecognized word
         /// </summary>
         [field:Description("erreur")]
         Error,
         /// <summary>
-        /// Answers no to a pop-up yes/no question
+        /// Answers yes to a pop-up yes/no question
         /// keyword: "ok"
         /// </summary>
         [field:Description("ok")]
@@ -23,7 +23,7 @@ namespace IPM_Project
         [field:Description("non")]
         No,
         /// <summary>
-        /// Creates a text area
+        /// Allows the user to add a comment
         /// keyword: "commentaire"
         /// </summary>
         [field:Description("commentaire")]

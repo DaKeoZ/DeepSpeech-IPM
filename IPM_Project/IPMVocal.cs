@@ -10,10 +10,12 @@ namespace IPM_Project
     /// Singleton used to run the program.
     /// </summary>
     public class IPMVocal {
+        
         /// <summary>
         /// Singleton's instance. 
         /// </summary>
         private static IPMVocal _instance;
+        
         /// <summary>
         /// TODO.
         /// </summary>
@@ -32,14 +34,13 @@ namespace IPM_Project
 
         /// <summary>
         /// Constructor
-        /// TODO: Doc (what does constructor do?)
-        /// Only called once because class is a singleton.
+        /// Initialize DeepSpeech and the 3 main classes of the project.
         /// </summary>
         private IPMVocal() {
             InitializeDeepSpeech();
-            _voiceDetector = new VoiceDetector(_deepSpeechClient);
             _commandInterpreter = new CommandInterpreter();
             _redisIntermediate = new RedisIntermediate();
+            _voiceDetector = new VoiceDetector(_deepSpeechClient);
         }
         
         /// <summary>
@@ -56,7 +57,7 @@ namespace IPM_Project
         }
 
         /// <summary>
-        /// TODO: Doc
+        /// Initialize DeepSpeech model located in pathToDeepSpeech
         /// </summary>
         private void InitializeDeepSpeech() {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);

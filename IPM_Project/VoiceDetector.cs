@@ -18,28 +18,74 @@ using Mvvm;
 
 namespace IPM_Project
 {
-    /// <summary>
-    /// TODO: Doc.
-    /// </summary>
-    public class VoiceDetector : BindableBase {
         
+    /// <summary>
+    /// View model of the MainWindow View.
+    /// </summary>
+    public class VoiceDetector : BindableBase
+    {
+        #region Constants
         private const int SampleRate = 16000;
-        private const string LMPath = "lm.binary";
-        private const string TriePath = "trie";
+        private const string LMPath = "F:\\deepspeech-0.6.1-models\\deepspeech-0.6.1-models\\lm.binary";
+        private const string TriePath = "F:\\deepspeech-0.6.1-models\\deepspeech-0.6.1-models\\trie";
+        #endregion
 
         private readonly IDeepSpeech _sttClient;
-        
-        private string CommandSTT;
-        
+
+        #region Commands
+        /// <summary>
+        /// Gets or sets the command that enables the language model.
+        /// </summary>
+        public IAsyncCommand EnableLanguageModelCommand { get; private set; }
+
+        /// <summary>
+        /// Gets or sets the command that runs inference using an audio file.
+        /// </summary>
         public IAsyncCommand InferenceFromFileCommand { get; private set; }
+
+        /// <summary>
+        /// Gets or sets the command that opens a dialog to select an audio file.
+        /// </summary>
+        public RelayCommand SelectFileCommand { get; private set; }
+
+        /// <summary>
+        /// Gets or sets the command that starts to record.
+        /// </summary>
         public RelayCommand StartRecordingCommand { get; private set; }
+
+        /// <summary>
+        /// Gets or sets the command that stops the recording and gets the result.
+        /// </summary>
         public IAsyncCommand StopRecordingCommand { get; private set; }
-        
+
+        #endregion
+
+        #region Streaming
+        /// <summary>
+        /// Records the audio of the selected device.
+        /// </summary>
         private WasapiCapture _audioCapture;
+
+        /// <summary>
+        /// Converts the device source into a wavesource.
+        /// </summary>
         private SoundInSource _soundInSource;
+
+        /// <summary>
+        /// Target wave source.(16KHz Mono 16bit for DeepSpeech)
+        /// </summary>
         private IWaveSource _convertedSource;
+
+        /// <summary>
+        /// Queue that prevents feeding data to the inference engine if it is busy.
+        /// </summary>
         private ConcurrentQueue<short[]> _bufferQueue = new ConcurrentQueue<short[]>();
+
         private int _threadSafeBoolBackValue = 0;
+
+        /// <summary>
+        /// Lock to process items in the queue one at time.
+        /// </summary>
         public bool StreamingIsBusy
         {
             get => (Interlocked.CompareExchange(ref _threadSafeBoolBackValue, 1, 1) == 1);
@@ -49,9 +95,15 @@ namespace IPM_Project
                 else Interlocked.CompareExchange(ref _threadSafeBoolBackValue, 0, 1);
             }
         }
-        
-        
+
+        #endregion
+
+        #region ViewProperties
+
         private bool _enableStartRecord;
+        /// <summary>
+        /// Gets or sets record status to control the record command.
+        /// </summary>
         public bool EnableStartRecord
         {
             get => _enableStartRecord;
@@ -59,30 +111,52 @@ namespace IPM_Project
         }
 
         private bool _stopRecordStopRecord;
-        
+        /// <summary>
+        /// Gets or sets record status to control stop command.
+        /// </summary>
         public bool EnableStopRecord
         {
             get => _stopRecordStopRecord;
             set => SetProperty(ref _stopRecordStopRecord, value,
                 onChanged: ()=> ((AsyncCommand)StopRecordingCommand).RaiseCanExecuteChanged());
         }
-        
+
         private MMDevice _selectedDevice;
+        /// <summary>
+        /// Gets or sets the selected recording device.
+        /// </summary>
         public MMDevice SelectedDevice
         {
             get => _selectedDevice;
             set => SetProperty(ref _selectedDevice, value, 
                 onChanged: UpdateSelectedDevice);
         }
-        
+
         private string _statusMessage;
+        /// <summary>
+        /// Gets or sets status message.
+        /// </summary>
         public string StatusMessage
         {
             get => _statusMessage;
             set => SetProperty(ref _statusMessage, value);
         }
 
+        private bool _languageModelEnabled;
+        /// <summary>
+        /// Gets or sets the language model status.
+        /// </summary>
+        private bool LanguageModelEnabled
+        {
+            get => _languageModelEnabled;
+            set => SetProperty(ref _languageModelEnabled, value,
+                    onChanged: () => ((AsyncCommand)EnableLanguageModelCommand).RaiseCanExecuteChanged());
+        }
+
         private bool _isRunningInference;
+        /// <summary>
+        /// Gets or sets whenever the model is running inference.
+        /// </summary>
         private bool IsRunningInference
         {
             get => _isRunningInference;
@@ -91,29 +165,45 @@ namespace IPM_Project
         }
 
         private string _transcription;
+        /// <summary>
+        /// Gets or sets the current transcription.
+        /// </summary>
         public string Transcription
         {
             get => _transcription;
             set => SetProperty(ref _transcription, value);
         }
 
-        private string _audioFilePath;
+        private string _audioFilePaht;
+        /// <summary>
+        /// Gets or sets the selected audio file path.
+        /// </summary>
         public string AudioFilePath
         {
-            get => _audioFilePath;
-            set => SetProperty(ref _audioFilePath, value);
+            get => _audioFilePaht;
+            set => SetProperty(ref _audioFilePaht, value);
         }
 
         private ObservableCollection<MMDevice> _deviceNames;
+        /// <summary>
+        /// Gets or sets the available recording devices.
+        /// </summary>
         public ObservableCollection<MMDevice> AvailableRecordDevices
         {
             get => _deviceNames;
             set => SetProperty(ref _deviceNames, value);
         }
-        
 
-        public VoiceDetector(IDeepSpeech sttClient) {
+        #endregion
+
+        #region Ctors
+        public VoiceDetector(IDeepSpeech sttClient)
+        {
             _sttClient = sttClient;
+            LoadAvailableCaptureDevices();
+
+            EnableLanguageModelCommand = new AsyncCommand(()=>EnableLanguageModelAsync(LMPath,TriePath),
+                _ => !LanguageModelEnabled);
 
             InferenceFromFileCommand = new AsyncCommand(ExecuteInferenceFromFileAsync,
                 _ => !IsRunningInference);
@@ -124,15 +214,21 @@ namespace IPM_Project
             StopRecordingCommand = new AsyncCommand(StopRecordingAsync,
                 _ => EnableStopRecord);
 
-            LoadAvailableCaptureDevices();
         }
-        
+        #endregion
+
+        /// <summary>
+        /// Releases the current capture device and initializes the selected one.
+        /// </summary>
         private void UpdateSelectedDevice()
         {
             ReleaseCapture();
             InitializeAudioCapture();
         }
-        
+
+        /// <summary>
+        /// Releases the capture device.
+        /// </summary>
         private void ReleaseCapture()
         {
             if (_audioCapture != null)
@@ -141,19 +237,29 @@ namespace IPM_Project
                 _audioCapture.Dispose();
             }
         }
-        
+        /// <summary>
+        /// Command usage to know when the recording can start.
+        /// </summary>
+        /// <returns>If the device is not null.</returns>
         private bool CanExecuteStartRecording() =>
             SelectedDevice != null;
 
+        /// <summary>
+        /// Loads all the available audio capture devices.
+        /// </summary>
         private void LoadAvailableCaptureDevices()
         {
             AvailableRecordDevices = new ObservableCollection<MMDevice>(
-                MMDeviceEnumerator.EnumerateDevices(DataFlow.All, DeviceState.Active)); 
+                MMDeviceEnumerator.EnumerateDevices(DataFlow.All, DeviceState.Active)); //we get only enabled devices    
             EnableStartRecord = true;
-            if (AvailableRecordDevices?.Count != 0)
+            if (AvailableRecordDevices?.Count != 0) {
                 SelectedDevice = AvailableRecordDevices[0];
+            }
         }
-        
+
+        /// <summary>
+        /// Initializes the capture source.
+        /// </summary>
         private void InitializeAudioCapture()
         {
             if (SelectedDevice != null)
@@ -161,19 +267,15 @@ namespace IPM_Project
                 _audioCapture = SelectedDevice.DataFlow == DataFlow.Capture ?
                     new WasapiCapture() : new WasapiLoopbackCapture();
                 _audioCapture.Device = SelectedDevice;
-                try {
-                    _audioCapture.Initialize();
-                }
-                catch (CoreAudioAPIException e) {
-                    Console.Write("Périphérique d'enregistrement audio en cours d'utilisation par une autre application.");
-                }
-
+                _audioCapture.Initialize();
                 _audioCapture.DataAvailable += Capture_DataAvailable;
                 _soundInSource = new SoundInSource(_audioCapture) { FillWithZeros = false };
+                //create a source, that converts the data provided by the
+                //soundInSource to required format
                 _convertedSource = _soundInSource
-                   .ChangeSampleRate(SampleRate)
+                   .ChangeSampleRate(SampleRate) // sample rate
                    .ToSampleSource()
-                   .ToWaveSource(16);
+                   .ToWaveSource(16); //bits per sample
 
                 _convertedSource = _convertedSource.ToMono();
             } 
@@ -181,9 +283,14 @@ namespace IPM_Project
 
         private void Capture_DataAvailable(object sender, DataAvailableEventArgs e)
         {
+            //read data from the converedSource
+            //important: don't use the e.Data here
+            //the e.Data contains the raw data provided by the 
+            //soundInSource which won't have the deepspeech required audio format
             byte[] buffer = new byte[_convertedSource.WaveFormat.BytesPerSecond / 2];
 
             int read;
+            //keep reading as long as we still get some data
             while ((read = _convertedSource.Read(buffer, 0, buffer.Length)) > 0)
             {
                 short[] sdata = new short[(int)Math.Ceiling(Convert.ToDecimal(read / 2))];
@@ -192,8 +299,10 @@ namespace IPM_Project
                 Task.Run(() => OnNewData());
             }
         }
-        
-        
+
+        /// <summary>
+        /// Starts processing data from the queue.
+        /// </summary>
         private void OnNewData()
         {
             while (!StreamingIsBusy && !_bufferQueue.IsEmpty)
@@ -206,6 +315,13 @@ namespace IPM_Project
                 }
             }
         }
+       
+        /// <summary>
+        /// Enables the language model.
+        /// </summary>
+        /// <param name="lmPath">Language model path.</param>
+        /// <param name="triePath">Trie path.</param>
+        /// <returns>A Task to await.</returns>
         public async Task EnableLanguageModelAsync(string lmPath, string triePath)
         {
             try
@@ -214,6 +330,7 @@ namespace IPM_Project
                 const float LM_ALPHA = 0.75f;
                 const float LM_BETA = 1.85f;
                 await Task.Run(() => _sttClient.EnableDecoderWithLM(LMPath, TriePath, LM_ALPHA, LM_BETA));
+                LanguageModelEnabled = true;
                 StatusMessage = "Language model loaded.";
             }
             catch (Exception ex)
@@ -221,7 +338,10 @@ namespace IPM_Project
                 StatusMessage = ex.Message;
             }
         }
-        
+        /// <summary>
+        /// Runs inference and sets the transcription of an audio file.
+        /// </summary>
+        /// <returns>A Task to await.</returns>
         public async Task ExecuteInferenceFromFileAsync()
         {
             try
@@ -255,18 +375,26 @@ namespace IPM_Project
                 IsRunningInference = false;
             }
         }
+
+        /// <summary>
+        /// Stops the recording and sets the transcription of the closed stream.
+        /// </summary>
+        /// <returns>A Task to await.</returns>
         private async Task StopRecordingAsync()
         {
             EnableStopRecord = false;
             _audioCapture.Stop();
-            while (!_bufferQueue.IsEmpty && StreamingIsBusy)
+            while (!_bufferQueue.IsEmpty && StreamingIsBusy) //we wait for all the queued buffers to be processed
             {
                 await Task.Delay(90);
             }
             Transcription = _sttClient.FinishStream();
             EnableStartRecord = true;
         }
-        
+
+        /// <summary>
+        /// Creates a new stream and starts the recording.
+        /// </summary>
         private void StartRecording()
         {
             _sttClient.CreateStream();
@@ -274,6 +402,6 @@ namespace IPM_Project
             EnableStartRecord = false;
             EnableStopRecord = true;
         }
-
     }
+    
 }
