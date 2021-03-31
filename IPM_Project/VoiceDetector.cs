@@ -26,8 +26,6 @@ namespace IPM_Project
     {
         #region Constants
         private const int SampleRate = 16000;
-        private const string LMPath = "F:\\deepspeech-0.6.1-models\\deepspeech-0.6.1-models\\lm.binary";
-        private const string TriePath = "F:\\deepspeech-0.6.1-models\\deepspeech-0.6.1-models\\trie";
         #endregion
 
         private readonly IDeepSpeech _sttClient;
@@ -201,8 +199,9 @@ namespace IPM_Project
         {
             _sttClient = sttClient;
             LoadAvailableCaptureDevices();
+            var config = JsonUtils.GetInstance().ReadPathsJSONData();
 
-            EnableLanguageModelCommand = new AsyncCommand(()=>EnableLanguageModelAsync(LMPath,TriePath),
+            EnableLanguageModelCommand = new AsyncCommand(()=>EnableLanguageModelAsync(config.DeepSpeechLMPath, config.DeepSpeechTriePath),
                 _ => !LanguageModelEnabled);
 
             InferenceFromFileCommand = new AsyncCommand(ExecuteInferenceFromFileAsync,
@@ -329,7 +328,7 @@ namespace IPM_Project
                 StatusMessage = "Loading language model...";
                 const float LM_ALPHA = 0.75f;
                 const float LM_BETA = 1.85f;
-                await Task.Run(() => _sttClient.EnableDecoderWithLM(LMPath, TriePath, LM_ALPHA, LM_BETA));
+                await Task.Run(() => _sttClient.EnableDecoderWithLM(lmPath, triePath, LM_ALPHA, LM_BETA));
                 LanguageModelEnabled = true;
                 StatusMessage = "Language model loaded.";
             }

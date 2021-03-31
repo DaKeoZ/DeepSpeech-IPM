@@ -17,27 +17,34 @@ namespace IPM_Project
         private static IPMVocal _instance;
         
         /// <summary>
-        /// TODO.
+        /// Instance of VoiceDetector class
         /// </summary>
         private VoiceDetector _voiceDetector;
         
         /// <summary>
-        /// TODO.
+        /// Instance of CommandInterpreter class
         /// </summary>
         private CommandInterpreter _commandInterpreter;
         
         /// <summary>
-        /// TODO.
+        /// Instance of RedisIntermediate class
         /// </summary>
         private RedisIntermediate _redisIntermediate;
         private DeepSpeechClient.DeepSpeech _deepSpeechClient;
 
+        private JsonUtils jsonUtils;
+
         /// <summary>
         /// Constructor
-        /// Initialize DeepSpeech and the 3 main classes of the project.
+        /// Initialize DeepSpeech, the JSON files and the 3 main classes of the project.
         /// </summary>
         private IPMVocal() {
-            InitializeDeepSpeech();
+            jsonUtils = new JsonUtils();
+            jsonUtils.InitPathsJSONFile();
+            jsonUtils.InitRedisJSONFile();
+            var config = jsonUtils.ReadPathsJSONData();
+            
+            InitializeDeepSpeech(config.DeepSpeechModelPath);
             _commandInterpreter = new CommandInterpreter();
             _redisIntermediate = new RedisIntermediate();
             _voiceDetector = new VoiceDetector(_deepSpeechClient);
@@ -59,28 +66,21 @@ namespace IPM_Project
         /// <summary>
         /// Initialize DeepSpeech model located in pathToDeepSpeech
         /// </summary>
-        private void InitializeDeepSpeech() {
+        /// <param name="modelPath">Path of DeepSpeech's model</param>
+        private void InitializeDeepSpeech(string modelPath) {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
             const int beamWidth = 500;
             _deepSpeechClient = new DeepSpeechClient.DeepSpeech();
             
             try {
-                _deepSpeechClient.CreateModel("F:\\deepspeech-0.6.1-models\\deepspeech-0.6.1-models\\output_graph.pbmm", beamWidth);
+                _deepSpeechClient.CreateModel(modelPath, beamWidth);
             } catch (FileNotFoundException Ex){
                 Console.Write(Ex.Message);
             }
 
             SimpleIoc.Default.Register<IDeepSpeech>(() => _deepSpeechClient);
             SimpleIoc.Default.Register<VoiceDetector>();
-        }
-        
-        /// <summary>
-        /// TODO: Doc
-        /// UNUSED.
-        /// </summary>
-        private void Stop() {
-            ServiceLocator.Current.GetInstance<IDeepSpeech>()?.Dispose();
         }
         
     }

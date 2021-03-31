@@ -240,6 +240,8 @@
         <Compile Include="CommandInterpreter.cs" />
         <Compile Include="CommandType.cs" />
         <Compile Include="IPMVocal.cs" />
+        <Compile Include="JsonUtils.cs" />
+        <Compile Include="PathsConfiguration.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="RedisConfiguration.cs" />
@@ -251,7 +253,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Update="appsettings.json">
+        <None Update="redisConfig.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="pathsConfig.json">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
     </ItemGroup>

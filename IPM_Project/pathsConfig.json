@@ -1,0 +1,5 @@
+{
+  "DeepSpeechModelPath":"..\\..\\Resources\\output_graph.pbmm",
+  "DeepSpeechLMPath":"..\\..\\Resources\\lm.binary",
+  "DeepSpeechTriePath":"..\\..\\Resources\\trie"
+}

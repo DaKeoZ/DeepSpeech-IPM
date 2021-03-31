@@ -8,6 +8,10 @@ namespace IPM_Project {
         public string RedisPort { get; set; }
         public string RedisPassword { get; set; }
 
+        /// <summary>
+        /// Constructor
+        /// Default values set at the generation of the file
+        /// </summary>
         public RedisConfiguration() {
             RedisHost = "localhost";
             RedisPort = "6379";

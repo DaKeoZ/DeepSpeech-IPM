@@ -12,10 +12,6 @@ namespace IPM_Project
     /// </summary>
     public class RedisIntermediate {
 
-        private string _redisHost;
-        private string _redisPort;
-        private string _redisPassword;
-
         private readonly ConnectionMultiplexer _muxer;
 
         /// <summary>
@@ -24,11 +20,10 @@ namespace IPM_Project
         /// </summary>
         public RedisIntermediate() {
 
-            InitJSONFile();
-            ReadJSONData();
-
+            var config = JsonUtils.GetInstance().ReadRedisJSONData();
+            
             try {
-                _muxer = ConnectionMultiplexer.Connect(_redisHost + ":" + _redisPort + ",password=" + _redisPassword);
+                _muxer = ConnectionMultiplexer.Connect(config.RedisHost + ":" + config.RedisPort + ",password=" + config.RedisPassword);
             }
             catch (Exception e) {
                 Console.WriteLine(e);
@@ -62,46 +57,7 @@ namespace IPM_Project
 
         }
 
-        /// <summary>
-        /// Initialize JSON File
-        /// </summary>
-        private void InitJSONFile() {
-
-            RedisConfiguration redisConfiguration = new RedisConfiguration();
-            string JSONResult = JsonConvert.SerializeObject(redisConfiguration);
-            string path = @"..\\..\\appsettings.json";
-            
-            if (!File.Exists(path)) {
-                using (var file = new StreamWriter(path, true)) {
-                    file.WriteLine(JSONResult.ToString());
-                    file.Close();
-                }
-            }
-
-        }
-
-        /// <summary>
-        /// Read JSON data from the config file
-        /// </summary>
-        private void ReadJSONData() {
-            
-            using (StreamReader r = new StreamReader(@"..\\..\\appsettings.json"))
-            {
-                string json = r.ReadToEnd();
-                RedisConfiguration redisConfiguration = JsonConvert.DeserializeObject<RedisConfiguration>(json);
-
-                if (redisConfiguration != null) {
-                    _redisHost = redisConfiguration.RedisHost;
-                    _redisPort = redisConfiguration.RedisPort;
-                    _redisPassword = redisConfiguration.RedisPassword;
-                } else {
-                    _redisHost = redisConfiguration.RedisHost;
-                    _redisPort = redisConfiguration.RedisPort;
-                    _redisPassword = redisConfiguration.RedisPassword;
-                }
-            }
-
-        }
+        
         
     }
 }
