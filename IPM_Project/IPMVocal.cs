@@ -32,17 +32,14 @@ namespace IPM_Project
         private RedisIntermediate _redisIntermediate;
         private DeepSpeechClient.DeepSpeech _deepSpeechClient;
 
-        private JsonUtils jsonUtils;
-
         /// <summary>
         /// Constructor
         /// Initialize DeepSpeech, the JSON files and the 3 main classes of the project.
         /// </summary>
         private IPMVocal() {
-            jsonUtils = new JsonUtils();
-            jsonUtils.InitPathsJSONFile();
-            jsonUtils.InitRedisJSONFile();
-            var config = jsonUtils.ReadPathsJSONData();
+            JsonUtils.GetInstance().InitPathsJSONFile();
+            JsonUtils.GetInstance().InitRedisJSONFile();
+            var config = JsonUtils.GetInstance().ReadPathsJSONData();
             
             InitializeDeepSpeech(config.DeepSpeechModelPath);
             _commandInterpreter = new CommandInterpreter();
